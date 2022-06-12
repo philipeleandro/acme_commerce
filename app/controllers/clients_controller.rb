@@ -1,5 +1,5 @@
 class ClientsController < ApplicationController
-  before_action :authenticate_user!, only: [:index, :new, :show, :create]
+  before_action :authenticate_user!, only: [:index, :new, :show, :create, :edit, :update]
 
   def index
     @clients = Client.all
@@ -31,6 +31,22 @@ class ClientsController < ApplicationController
     redirect_to clients_path, notice: 'Cliente deletado com sucesso'
   end
 
+  def edit
+    @client = Client.find(params[:id])
+  end
+
+  def update
+    @client = Client.find(params[:id])
+
+    if @client.update(client_params)
+      redirect_to clients_path, notice: 'Cliente atualizado com sucesso'
+    else
+      flash.now[:notice] = 'Não foi possível atualizar'
+      render 'edit'
+    end
+  end
+
+  private
   def client_params
     params.require(:client).permit(:name, :address, :city, :state)
   end
