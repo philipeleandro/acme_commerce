@@ -1,5 +1,5 @@
 class ClientsController < ApplicationController
-  before_action :authenticate_user!, only: [:index, :new]
+  before_action :authenticate_user!, only: [:index, :new, :show, :create]
 
   def index
     @clients = Client.all
@@ -18,6 +18,10 @@ class ClientsController < ApplicationController
       flash.now[:notice] = 'Não foi possível cadastrar'
       render 'new'
     end
+  end
+
+  def show
+    @client = Client.find(params[:id])
   end
 
   def client_params

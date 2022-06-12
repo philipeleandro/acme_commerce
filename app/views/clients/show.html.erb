@@ -1,0 +1,19 @@
+<h1>Detalhes - <%= @client.name %></h1>
+
+<div>
+  <dl>
+    <dt><strong>Nome: </strong></dt>
+    <dd><%= @client.name %></dd>
+    <dt><strong>Endereço: </strong></dt>
+    <dd><%= @client.address %></dd>
+    <dt><strong>Cidade: </strong></dt>
+    <dd><%= @client.city %></dd>
+    <dt><strong>Estado: </strong></dt>
+    <dd><%= @client.state %></dd>
+  </dl>
+</div>
+
+
+<div>
+  <%= link_to 'Voltar', clients_path %>
+</div>

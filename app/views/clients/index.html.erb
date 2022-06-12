@@ -7,7 +7,7 @@
     <div>
       <dl>
         <dt>Nome: </dt>
-        <dd><%= client.name %></dd>
+        <dd><%= link_to client.name, client_path(client) %></dd>
         <dt>Endereço: </dt>
         <dd><%= client.address %>, <%= client.city %> - <%= client.state %><br></dd>
       </dl>
