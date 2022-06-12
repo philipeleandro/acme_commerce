@@ -1,5 +1,5 @@
 class CategoriesController < ApplicationController
-  before_action :authenticate_user!, only: [:index, :new, :create]
+  before_action :authenticate_user!, only: [:index, :new, :create, :edit, :update]
 
   def index
     @categories = Category.all
@@ -25,6 +25,21 @@ class CategoriesController < ApplicationController
 
     @category.destroy
     redirect_to categories_path, notice: 'Categoria deletada'
+  end
+
+  def edit
+    @category = Category.find(params[:id])
+  end
+
+  def update
+    @category = Category.find(params[:id])
+
+    if @category.update(category_params)
+      redirect_to categories_path, notice: 'Categoria atualizada com sucesso'
+    else
+      flash.now[:notice] = 'Não foi possível atualizar'
+      render 'edit'
+    end
   end
 
   def category_params
