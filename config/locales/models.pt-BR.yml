@@ -2,9 +2,12 @@ pt-BR:
   activerecord:
     models:
       client: Cliente
+      category: Categoria
     attributes:
       client:
         name: Nome
         address: Endereço
         city: Cidade
         state: Estado
+      category:
+        name: Nome

@@ -1,0 +1,14 @@
+<h1>Cadastre nova Categoria</h1>
+
+<% if @category.errors.any? %>
+  <p>Verifique os erros abaixo:</p>
+  <ul>
+    <% @category.errors.full_messages.each do |msg|%>
+      <%= msg %>
+    <% end %>
+  </ul>
+<% else %>
+  <%= render 'form' %>
+<% end %>
+
+<%= link_to 'Voltar', categories_path %>
