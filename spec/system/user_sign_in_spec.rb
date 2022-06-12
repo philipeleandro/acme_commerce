@@ -25,11 +25,11 @@ describe 'User sign in' do
 
     visit root_path
     click_on 'Entrar'
-    fill_in 'Email', with: 'example@example.com'
-    fill_in 'Password', with: 'passord'
+    fill_in 'E-mail', with: 'example@example.com'
+    fill_in 'Senha', with: 'passord'
     click_on 'Log in'
 
     expect(current_path).to eq new_user_session_path
-    expect(page).to have_content 'Invalid Email or password'
+    expect(page).to have_content 'E-mail ou senha inválidos.'
   end
 end
