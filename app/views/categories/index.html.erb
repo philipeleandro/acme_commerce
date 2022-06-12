@@ -1,0 +1,20 @@
+<h1>Categorias</h1>
+
+<% if @categories.empty? %>
+  <p>Não há categoria cadastrada</p>
+<% else %>
+  <table>
+    <thead>
+      <tr>
+        <th>Nome da Categoria</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% @categories.each do |category| %>
+        <tr>
+          <td><%= category.name %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+<% end %>
