@@ -1,0 +1,18 @@
+<h1>Clientes</h1>
+
+<% if @clients.empty? %>
+  Não há clientes cadastrados
+<% else %>
+  <% @clients.each do |client| %>
+    <div>
+      <dl>
+        <dt>Nome: </dt>
+        <dd><%= client.name %></dd>
+        <dt>Endereço: </dt>
+        <dd><%= client.address %>, <%= client.city %> - <%= client.state %></dd>
+      </dl>
+    </div>
+  <% end %>
+<% end %>
+
+<%= link_to 'Voltar', root_path %>
