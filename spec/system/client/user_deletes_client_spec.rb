@@ -18,7 +18,7 @@ describe 'User deletes a client' do
     expect(page).not_to have_content 'Rua um dia vai, 1234, Belo Horizonte - Minas Gerais'
   end  
 
-  it 'success' do
+  it 'does not delete others' do
     user = User.create(email: 'example@example.com', password: 'password')
     Client.create(name: 'Pedrinho', address: 'Rua um dia vai, 1234', state: 'Minas Gerais', city: 'Belo Horizonte')
     Client.create(name: 'Pedro', address: 'Rua um dia, 134', state: 'São Paulo', city: 'São Paulo')
