@@ -1,0 +1,14 @@
+<h1>Cadastre novo Cliente</h1>
+
+<% if @client.errors.any? %>
+  <p>Verifique os erros abaixo:</p>
+  <ul>
+  <% @client.errors.full_messages.each do |msg|%>
+    <li><%= msg %></li>
+  <% end %>
+  </ul>
+<% else %>
+  <%= render 'form' %>
+<% end %>
+
+<%= link_to 'Voltar', clients_path %>

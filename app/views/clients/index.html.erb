@@ -1,7 +1,7 @@
 <h1>Clientes</h1>
-
+  <%= link_to 'Cadastrar Clientes', new_client_path %><br>
 <% if @clients.empty? %>
-  Não há clientes cadastrados
+  <p> Não há clientes cadastrados </p>
 <% else %>
   <% @clients.each do |client| %>
     <div>
@@ -9,7 +9,7 @@
         <dt>Nome: </dt>
         <dd><%= client.name %></dd>
         <dt>Endereço: </dt>
-        <dd><%= client.address %>, <%= client.city %> - <%= client.state %></dd>
+        <dd><%= client.address %>, <%= client.city %> - <%= client.state %><br></dd>
       </dl>
     </div>
   <% end %>
