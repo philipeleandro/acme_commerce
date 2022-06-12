@@ -24,6 +24,13 @@ class ClientsController < ApplicationController
     @client = Client.find(params[:id])
   end
 
+  def destroy
+    @client = Client.find(params[:id])
+
+    @client.destroy
+    redirect_to clients_path, notice: 'Cliente deletado com sucesso'
+  end
+
   def client_params
     params.require(:client).permit(:name, :address, :city, :state)
   end
