@@ -29,6 +29,6 @@ describe 'User sees all categories' do
     login_as(user)
     visit categories_path
 
-    expect(page).to have_content 'Não há categoria de produto cadastrada'
+    expect(page).to have_content 'Não há categoria cadastrada'
   end
 end
