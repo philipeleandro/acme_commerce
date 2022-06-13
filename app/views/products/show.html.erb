@@ -1,0 +1,20 @@
+<h1>Detalhes - <%= @product.name %></h1>
+
+<div>
+  <dl>
+    <dt><strong>Nome: </strong></dt>
+    <dd><%= @product.name %></dd>
+    <dt><strong>Categoria: </strong></dt>
+    <dd><%= @product.category.name %></dd>
+    <dt><strong>Valor: </strong></dt>
+    <dd>R$ <%= @product.value %></dd>
+    <dt><strong>Valor Base: </strong></dt>
+    <dd>R$ <%= @product.base_value %></dd>
+    <dt><strong>Imagem: </strong></dt>
+    <dd><%= @product.image_url %></dd>
+  </dl>
+</div>
+
+<div>
+  <%= link_to 'Voltar', products_path %>
+</div>
