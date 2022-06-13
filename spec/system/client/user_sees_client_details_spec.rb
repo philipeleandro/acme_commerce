@@ -25,7 +25,7 @@ describe 'User sees a client details' do
     expect(page).to have_content 'Estado: Minas Gerais'
   end
 
-  it 'and must log in' do
+  it 'return when clicks on Voltar' do
     user = User.create(email: 'example@example.com', password: 'password')
     Client.create(name: 'Pedrinho', address: 'Rua um dia vai, 1234', state: 'Minas Gerais', city: 'Belo Horizonte')
 
