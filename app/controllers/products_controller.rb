@@ -31,6 +31,21 @@ class ProductsController < ApplicationController
     redirect_to products_path, notice: 'Produto deletado'
   end
 
+  def update
+    @product = Product.find(params[:id])
+
+    if @product.update(product_params)
+      redirect_to products_path, notice: 'Produto atualizado'
+    else
+      flash.now[:notice] = 'Não foi possível atualizar'
+      render 'edit'
+    end
+  end
+
+  def edit
+    @product = Product.find(params[:id])
+  end
+
   private
   def product_params
     params.require(:product).permit(:name, :value, :base_value, :image_url, :category_id)
