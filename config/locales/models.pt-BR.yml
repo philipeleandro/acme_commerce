@@ -3,6 +3,7 @@ pt-BR:
     models:
       client: Cliente
       category: Categoria
+      prodcut: 'Produto'
     attributes:
       client:
         name: Nome
@@ -11,3 +12,9 @@ pt-BR:
         state: Estado
       category:
         name: Nome
+      product:
+        name: Nome
+        value: Valor
+        base_value: Valor Base
+        image_url: Imagem
+        category_id: Categoria
