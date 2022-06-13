@@ -24,6 +24,13 @@ class ProductsController < ApplicationController
     end
   end
 
+  def destroy
+    @product = Product.find(params[:id])
+
+    @product.destroy
+    redirect_to products_path, notice: 'Produto deletado'
+  end
+
   private
   def product_params
     params.require(:product).permit(:name, :value, :base_value, :image_url, :category_id)
