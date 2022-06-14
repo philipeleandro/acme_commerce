@@ -12,10 +12,9 @@ describe 'User register a new client' do
 
     login_as(user)
     visit clients_path
-    click_on 'Ordens'
-    click_on 'Cadastrar nova ordem'
+    click_on 'Cadastrar Cliente'
 
-    expect(page).to have_field 'Nome' 
+    expect(page).to have_field 'Nome'
     expect(page).to have_field 'Endereço'
     expect(page).to have_field 'Cidade'
     expect(page).to have_field 'Estado'
