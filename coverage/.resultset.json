@@ -533,6 +533,7 @@
           1,
           1,
           1,
+          1,
           null
         ]
       },
@@ -624,6 +625,21 @@
           1,
           1,
           null,
+          1,
+          null
+        ]
+      },
+      "/home/philipe/Desktop/acme_commerce/spec/models/order_product_spec.rb": {
+        "lines": [
+          1,
+          null,
+          1,
+          1,
+          null
+        ]
+      },
+      "/home/philipe/Desktop/acme_commerce/app/models/order_product.rb": {
+        "lines": [
           1,
           null
         ]
@@ -1077,6 +1093,7 @@
           1,
           1,
           1,
+          1,
           null,
           1,
           1,
@@ -1203,6 +1220,92 @@
           1,
           1,
           null,
+          1,
+          null,
+          null,
+          1,
+          1,
+          null,
+          1,
+          1,
+          1,
+          null,
+          1,
+          null,
+          null
+        ]
+      },
+      "/home/philipe/Desktop/acme_commerce/spec/system/order/user_creates_order_spec.rb": {
+        "lines": [
+          1,
+          null,
+          1,
+          1,
+          1,
+          null,
+          1,
+          null,
+          null,
+          1,
+          1,
+          null,
+          1,
+          1,
+          1,
+          1,
+          null,
+          0,
+          0,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ]
+      },
+      "/home/philipe/Desktop/acme_commerce/spec/system/order/user_views_orders_spec.rb": {
+        "lines": [
+          1,
+          null,
+          1,
+          1,
+          1,
+          null,
+          1,
+          null,
+          null,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          null,
+          1,
+          1,
+          1,
+          null,
+          1,
           1,
           null,
           null,
@@ -1665,6 +1768,17 @@
           null
         ]
       },
+      "/home/philipe/Desktop/acme_commerce/app/controllers/orders_controller.rb": {
+        "lines": [
+          1,
+          1,
+          null,
+          1,
+          4,
+          null,
+          null
+        ]
+      },
       "/home/philipe/Desktop/acme_commerce/app/controllers/products_controller.rb": {
         "lines": [
           1,
@@ -1723,6 +1837,6 @@
         ]
       }
     },
-    "timestamp": 1655245318
+    "timestamp": 1655247926
   }
 }

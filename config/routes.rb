@@ -5,4 +5,5 @@ Rails.application.routes.draw do
   resources :clients, only: [:index, :new, :create, :show, :destroy, :edit, :update]
   resources :categories, only: [:index, :new, :create, :destroy, :edit, :update]
   resources :products, only: [:index, :new, :create, :show, :destroy, :edit, :update]
+  resources :orders, only: [:index, :new, :create, :show, :destroy, :edit, :update]
 end

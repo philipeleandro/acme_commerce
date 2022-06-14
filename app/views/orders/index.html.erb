@@ -1,0 +1,18 @@
+<h1>Ordens</h1>
+  <%= link_to 'Cadastrar nova ordem', new_order_path %><br>
+<% if @orders.empty? %>
+  <p> Não há ordem cadastrada </p>
+<% else %>
+  <% @orders.each do |order| %>
+    <div>
+      <dl>
+        <dt>Ordem: </dt>
+        <dd><%= link_to order.reference_number, order_path(order) %></dd>
+        <dt>Valor: </dt>
+        <dd>R$ <%= order.value %><br></dd>
+      </dl>
+    </div>
+  <% end %>
+<% end %>
+
+<%= link_to 'Voltar', root_path %>
