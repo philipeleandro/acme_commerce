@@ -28,6 +28,13 @@ class OrdersController < ApplicationController
     @order = Order.find(params[:id])
   end
 
+  def destroy 
+    @order = Order.find(params[:id])
+
+    @order.destroy
+    redirect_to orders_path, notice: 'Ordem deletada com sucesso'
+  end
+
   def order_params
     params.require(:order).permit(:reference_number, :status, :payment_date, :value, :client_id, :product_id)
   end

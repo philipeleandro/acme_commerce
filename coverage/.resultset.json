@@ -634,7 +634,7 @@
           1,
           null,
           1,
-          1,
+          null,
           null
         ]
       },
@@ -734,7 +734,7 @@
           1,
           null,
           1,
-          14,
+          15,
           null,
           null,
           1,
@@ -1334,6 +1334,34 @@
           null
         ]
       },
+      "/home/philipe/Desktop/acme_commerce/spec/system/order/user_deletes_order_spec.rb": {
+        "lines": [
+          1,
+          null,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          null,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          null,
+          1,
+          1,
+          1,
+          null,
+          null
+        ]
+      },
       "/home/philipe/Desktop/acme_commerce/spec/system/order/user_shows_order_detail_spec.rb": {
         "lines": [
           1,
@@ -1886,7 +1914,7 @@
           1,
           null,
           1,
-          9,
+          11,
           null,
           null,
           1,
@@ -1909,7 +1937,14 @@
           null,
           null,
           1,
-          2,
+          3,
+          null,
+          null,
+          1,
+          1,
+          null,
+          1,
+          1,
           null,
           null,
           1,
@@ -1976,6 +2011,6 @@
         ]
       }
     },
-    "timestamp": 1655296586
+    "timestamp": 1655297539
   }
 }
