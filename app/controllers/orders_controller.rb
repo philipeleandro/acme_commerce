@@ -1,5 +1,5 @@
 class OrdersController < ApplicationController
-  before_action :authenticate_user!, only: [:index, :new, :create, :show]
+  before_action :authenticate_user!, only: [:index, :new, :create, :show, :edit, :update]
   
   def index
     @orders = Order.all
@@ -33,6 +33,21 @@ class OrdersController < ApplicationController
 
     @order.destroy
     redirect_to orders_path, notice: 'Ordem deletada com sucesso'
+  end
+
+  def edit
+    @order = Order.find(params[:id])
+  end
+
+  def update
+    @order = Order.find(params[:id])
+
+    if @order.update(order_params)
+      redirect_to orders_path, notice: 'Ordem atualizada com sucesso'
+    else
+      flash.now[:notice] = 'Não foi possível atualizar'
+      render 'edit'
+    end
   end
 
   def order_params

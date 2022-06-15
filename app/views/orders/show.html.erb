@@ -10,11 +10,16 @@
     <dd><%= Client.find(@order.client_id).name %></dd>
     <dt><strong>Status: </strong></dt>
     <dd><%= @order.status %></dd>
+    <dt><strong>Data de Pagamento: </strong></dt>
+    <dd><%= I18n.localize(@order.payment_date) %></dd>
   </dl>
 </div>
 
 <div>
   <%= button_to 'Deletar', order_path(@order), method: :delete %>
+</div>
+<div>
+  <%= link_to 'Editar', edit_order_path(@order) %>
 </div>
 <div>
   <%= link_to 'Voltar', orders_path %>
