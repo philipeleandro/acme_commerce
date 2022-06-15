@@ -22,7 +22,7 @@ describe 'User register a new order' do
 
   it 'with success' do
     user = User.create(email: 'example@example.com', password: 'password')
-    new_client = Client.create(name:'Pedro Gomes', state: 'Ceará', city: 'Fortaleza', address: 'Rua das lutas, 1000')
+    new_client = Client.create(name:'Pedro Gomes', state: 'Ceará', city: 'Fortaleza', address: 'Rua das lutas, 1000', email: 'example@example.com')
     new_category = Category.create(name: 'Phone')
     new_product = Product.create(name: 'Case', value: 10, base_value: 7, image_url: 'http://www.example.com', category: new_category)
 
@@ -40,7 +40,7 @@ describe 'User register a new order' do
 
   it 'fail' do
     user = User.create(email: 'example@example.com', password: 'password')
-    new_client = Client.create(name:'Pedro Gomes', state: 'Ceará', city: 'Fortaleza', address: 'Rua das lutas, 1000')
+    new_client = Client.create(name:'Pedro Gomes', state: 'Ceará', city: 'Fortaleza', address: 'Rua das lutas, 1000', email: 'example@example.com')
     new_category = Category.create(name: 'Phone')
     new_product = Product.create(name: 'Case', value: 10, base_value: 7, image_url: 'http://www.example.com', category: new_category)
     new_order = Order.create(status: 1, payment_date: Date.today, client: new_client)

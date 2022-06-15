@@ -18,6 +18,7 @@ describe 'User register a new client' do
     expect(page).to have_field 'Endereço'
     expect(page).to have_field 'Cidade'
     expect(page).to have_field 'Estado'
+    expect(page).to have_field 'Email'
   end
 
   it 'success' do
@@ -30,6 +31,7 @@ describe 'User register a new client' do
     fill_in 'Endereço', with: 'Rua da glória, 750'
     fill_in 'Cidade', with: 'Crato'
     fill_in 'Estado', with: 'Ceará'
+    fill_in 'Email', with: 'example@exam.com'
     click_on 'Cadastrar'
 
     expect(current_path).to eq clients_path
@@ -48,11 +50,13 @@ describe 'User register a new client' do
     fill_in 'Endereço', with: ''
     fill_in 'Cidade', with: 'Crato'
     fill_in 'Estado', with: ''
+    fill_in 'Email', with: ''
     click_on 'Cadastrar'
 
     expect(page).to have_content 'Não foi possível cadastrar'
     expect(page).to have_content 'Verifique os erros abaixo:'
     expect(page).to have_content 'Endereço não pode ficar em branco'
     expect(page).to have_content 'Estado não pode ficar em branco'
+    expect(page).to have_content 'Email não pode ficar em branco'
   end
 end

@@ -3,7 +3,7 @@ require 'rails_helper'
 describe "User edits a client" do
   it 'in client details' do
     user = User.create(email: 'example@example.com', password: 'password')
-    Client.create(name: 'Pedrinho', address: 'Rua um dia vai, 1234', state: 'Minas Gerais', city: 'Belo Horizonte')
+    Client.create(name: 'Pedrinho', address: 'Rua um dia vai, 1234', state: 'Minas Gerais', city: 'Belo Horizonte', email: 'example@example.com')
 
     visit root_path
     click_on 'Entrar'
@@ -17,11 +17,12 @@ describe "User edits a client" do
     expect(page).to have_field('Endereço', with: 'Rua um dia vai, 1234')
     expect(page).to have_field('Estado', with: 'Minas Gerais')
     expect(page).to have_field('Cidade', with: 'Belo Horizonte')
+    expect(page).to have_field('Email', with: 'example@example.com')
   end 
 
   it 'success' do
     user = User.create(email: 'example@example.com', password: 'password')
-    Client.create(name: 'Pedrinho', address: 'Rua um dia vai, 1234', state: 'Minas Gerais', city: 'Belo Horizonte')
+    Client.create(name: 'Pedrinho', address: 'Rua um dia vai, 1234', state: 'Minas Gerais', city: 'Belo Horizonte', email: 'example@example.com')
 
     visit root_path
     click_on 'Entrar'
@@ -41,7 +42,7 @@ describe "User edits a client" do
 
   it 'fail' do
      user = User.create(email: 'example@example.com', password: 'password')
-    Client.create(name: 'Pedrinho', address: 'Rua um dia vai, 1234', state: 'Minas Gerais', city: 'Belo Horizonte')
+    Client.create(name: 'Pedrinho', address: 'Rua um dia vai, 1234', state: 'Minas Gerais', city: 'Belo Horizonte', email: 'example@example.com')
 
     visit root_path
     click_on 'Entrar'

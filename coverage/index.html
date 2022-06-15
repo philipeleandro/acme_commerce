@@ -14,7 +14,7 @@
       <img src="./assets/0.12.3/loading.gif" alt="loading"/>
     </div>
     <div id="wrapper" class="hide">
-      <div class="timestamp">Generated <abbr class="timeago" title="2022-06-15T13:02:57-03:00">2022-06-15T13:02:57-03:00</abbr></div>
+      <div class="timestamp">Generated <abbr class="timeago" title="2022-06-15T14:42:37-03:00">2022-06-15T14:42:37-03:00</abbr></div>
       <ul class="group_tabs"></ul>
 
       <div id="content">
@@ -43,8 +43,8 @@
   </div>
 
   <div class="t-line-summary">
-    <b>975</b> relevant lines,
-    <span class="green"><b>975</b> lines covered</span> and
+    <b>980</b> relevant lines,
+    <span class="green"><b>980</b> lines covered</span> and
     <span class="red"><b>0</b> lines missed. </span>
     (<span class="green">
   100.0%
@@ -480,9 +480,9 @@
           <tr class="t-file">
             <td class="strong t-file__name"><a href="#a20d3354eb5639f101765c0bce80a15bc262b446" class="src_link" title="spec/system/client/user_edits_a_client_spec.rb">spec/system/client/user_edits_a_client_spec.rb</a></td>
             <td class="green strong cell--number t-file__coverage">100.00 %</td>
-            <td class="cell--number">58</td>
-            <td class="cell--number">44</td>
-            <td class="cell--number">44</td>
+            <td class="cell--number">59</td>
+            <td class="cell--number">45</td>
+            <td class="cell--number">45</td>
             <td class="cell--number">0</td>
             <td class="cell--number">1.00</td>
             
@@ -491,9 +491,9 @@
           <tr class="t-file">
             <td class="strong t-file__name"><a href="#2cb4721a4c0eb2aa35125fc30cd0e2d99b435dae" class="src_link" title="spec/system/client/user_register_client_spec.rb">spec/system/client/user_register_client_spec.rb</a></td>
             <td class="green strong cell--number t-file__coverage">100.00 %</td>
-            <td class="cell--number">58</td>
-            <td class="cell--number">42</td>
-            <td class="cell--number">42</td>
+            <td class="cell--number">62</td>
+            <td class="cell--number">46</td>
+            <td class="cell--number">46</td>
             <td class="cell--number">0</td>
             <td class="cell--number">1.00</td>
             
@@ -502,7 +502,7 @@
           <tr class="t-file">
             <td class="strong t-file__name"><a href="#96a6c3ce5902021c0940be893bd11a4ececdc2a9" class="src_link" title="spec/system/client/user_sees_client_details_spec.rb">spec/system/client/user_sees_client_details_spec.rb</a></td>
             <td class="green strong cell--number t-file__coverage">100.00 %</td>
-            <td class="cell--number">40</td>
+            <td class="cell--number">39</td>
             <td class="cell--number">27</td>
             <td class="cell--number">27</td>
             <td class="cell--number">0</td>
@@ -1865,7 +1865,7 @@
 
             
 
-            <code class="ruby">    params.require(:client).permit(:name, :address, :city, :state)</code>
+            <code class="ruby">    params.require(:client).permit(:name, :address, :city, :state, :email)</code>
           </li>
         </div>
       
@@ -3468,7 +3468,7 @@
 
             
 
-            <code class="ruby">  validates :name, :city, :address, :state, presence: true</code>
+            <code class="ruby">  validates :name, :city, :address, :state, :email, presence: true</code>
           </li>
         </div>
       
@@ -9770,7 +9770,7 @@
 
             
 
-            <code class="ruby">        client = Client.new(name: &#39;&#39;, address: &#39;Rua da vitória&#39;, city: &#39;Juazeiro do Norte&#39;, state: &#39;Ceará&#39;)</code>
+            <code class="ruby">        client = Client.new(name: &#39;&#39;, address: &#39;Rua da vitória&#39;, city: &#39;Juazeiro do Norte&#39;, state: &#39;Ceará&#39;, email: &#39;example@example.com&#39;)</code>
           </li>
         </div>
       
@@ -9836,7 +9836,7 @@
 
             
 
-            <code class="ruby">        client = Client.new(name: &#39;Lucas&#39;, address: &#39;Rua da vitória&#39;, city: &#39;Juazeiro do Norte&#39;, state: &#39;Ceará&#39;)</code>
+            <code class="ruby">        client = Client.new(name: &#39;Lucas&#39;, address: &#39;Rua da vitória&#39;, city: &#39;Juazeiro do Norte&#39;, state: &#39;Ceará&#39;, email: &#39;example@example.com&#39;)</code>
           </li>
         </div>
       
@@ -9902,7 +9902,7 @@
 
             
 
-            <code class="ruby">        client = Client.new(name: &#39;&#39;, address: &#39;&#39;, city: &#39;Juazeiro do Norte&#39;, state: &#39;Ceará&#39;)</code>
+            <code class="ruby">        client = Client.new(name: &#39;&#39;, address: &#39;&#39;, city: &#39;Juazeiro do Norte&#39;, state: &#39;Ceará&#39;, email: &#39;example@example.com&#39;)</code>
           </li>
         </div>
       
@@ -9968,7 +9968,7 @@
 
             
 
-            <code class="ruby">        client = Client.new(name: &#39;Lucas&#39;, address: &#39;Rua da vitória&#39;, city: &#39;Juazeiro do Norte&#39;, state: &#39;Ceará&#39;)</code>
+            <code class="ruby">        client = Client.new(name: &#39;Lucas&#39;, address: &#39;Rua da vitória&#39;, city: &#39;Juazeiro do Norte&#39;, state: &#39;Ceará&#39;, email: &#39;example@example.com&#39;)</code>
           </li>
         </div>
       
@@ -10034,7 +10034,7 @@
 
             
 
-            <code class="ruby">      client = Client.new(name: &#39;Lucas&#39;, address: &#39;Rua da vitória&#39;, city: &#39;&#39;, state: &#39;Ceará&#39;)</code>
+            <code class="ruby">      client = Client.new(name: &#39;Lucas&#39;, address: &#39;Rua da vitória&#39;, city: &#39;&#39;, state: &#39;Ceará&#39;, email: &#39;example@example.com&#39;)</code>
           </li>
         </div>
       
@@ -10100,7 +10100,7 @@
 
             
 
-            <code class="ruby">        client = Client.new(name: &#39;Lucas&#39;, address: &#39;Rua da vitória&#39;, city: &#39;Juazeiro do Norte&#39;, state: &#39;Ceará&#39;)</code>
+            <code class="ruby">        client = Client.new(name: &#39;Lucas&#39;, address: &#39;Rua da vitória&#39;, city: &#39;Juazeiro do Norte&#39;, state: &#39;Ceará&#39;, email: &#39;example@example.com&#39;)</code>
           </li>
         </div>
       
@@ -10360,7 +10360,7 @@
 
             
 
-            <code class="ruby">        client = Client.create(name: &#39;Lucas&#39;, address: &#39;Rua da vitória&#39;, city: &#39;Juazeiro do Norte&#39;, state: &#39;Ceará&#39;)</code>
+            <code class="ruby">        client = Client.create(name: &#39;Lucas&#39;, email: &#39;example@example.com&#39;, address: &#39;Rua da vitória&#39;, city: &#39;Juazeiro do Norte&#39;, state: &#39;Ceará&#39;)</code>
           </li>
         </div>
       
@@ -10437,7 +10437,7 @@
 
             
 
-            <code class="ruby">        client = Client.create(name: &#39;Lucas&#39;, address: &#39;Rua da vitória&#39;, city: &#39;Juazeiro do Norte&#39;, state: &#39;Ceará&#39;)</code>
+            <code class="ruby">        client = Client.create(name: &#39;Lucas&#39;, address: &#39;Rua da vitória&#39;, city: &#39;Juazeiro do Norte&#39;, state: &#39;Ceará&#39;, email: &#39;example@example.com&#39;)</code>
           </li>
         </div>
       
@@ -10514,7 +10514,7 @@
 
             
 
-            <code class="ruby">        client = Client.create(name: &#39;Lucas&#39;, address: &#39;Rua da vitória&#39;, city: &#39;Juazeiro do Norte&#39;, state: &#39;Ceará&#39;)</code>
+            <code class="ruby">        client = Client.create(name: &#39;Lucas&#39;, address: &#39;Rua da vitória&#39;, city: &#39;Juazeiro do Norte&#39;, state: &#39;Ceará&#39;, email: &#39;example@example.com&#39;)</code>
           </li>
         </div>
       
@@ -10613,7 +10613,7 @@
 
             
 
-            <code class="ruby">        client = Client.create(name: &#39;Lucas&#39;, address: &#39;Rua da vitória&#39;, city: &#39;Juazeiro do Norte&#39;, state: &#39;Ceará&#39;)</code>
+            <code class="ruby">        client = Client.create(name: &#39;Lucas&#39;, address: &#39;Rua da vitória&#39;, city: &#39;Juazeiro do Norte&#39;, state: &#39;Ceará&#39;, email: &#39;example@example.com&#39;)</code>
           </li>
         </div>
       
@@ -10789,7 +10789,7 @@
 
             
 
-            <code class="ruby">        new_client = Client.create(name:&#39;Pedro Gomes&#39;, state: &#39;Ceará&#39;, city: &#39;Fortaleza&#39;, address: &#39;Rua das lutas, 1000&#39;)</code>
+            <code class="ruby">        new_client = Client.create(name:&#39;Pedro Gomes&#39;, state: &#39;Ceará&#39;, city: &#39;Fortaleza&#39;, address: &#39;Rua das lutas, 1000&#39;, email: &#39;example@example.com&#39;)</code>
           </li>
         </div>
       
@@ -10965,7 +10965,7 @@
 
             
 
-            <code class="ruby">        new_client = Client.create(name:&#39;Pedro Gomes&#39;, state: &#39;Ceará&#39;, city: &#39;Fortaleza&#39;, address: &#39;Rua das lutas, 1000&#39;)</code>
+            <code class="ruby">        new_client = Client.create(name:&#39;Pedro Gomes&#39;, state: &#39;Ceará&#39;, city: &#39;Fortaleza&#39;, address: &#39;Rua das lutas, 1000&#39;, email: &#39;example@example.com&#39;)</code>
           </li>
         </div>
       
@@ -13952,7 +13952,7 @@
 
             
 
-            <code class="ruby">    Client.create(name: &#39;Pedrinho&#39;, address: &#39;Rua um dia vai, 1234&#39;, state: &#39;Minas Gerais&#39;, city: &#39;Belo Horizonte&#39;)</code>
+            <code class="ruby">    Client.create(name: &#39;Pedrinho&#39;, address: &#39;Rua um dia vai, 1234&#39;, state: &#39;Minas Gerais&#39;, city: &#39;Belo Horizonte&#39;, email: &#39;example@example.com&#39;)</code>
           </li>
         </div>
       
@@ -14139,7 +14139,7 @@
 
             
 
-            <code class="ruby">    Client.create(name: &#39;Pedrinho&#39;, address: &#39;Rua um dia vai, 1234&#39;, state: &#39;Minas Gerais&#39;, city: &#39;Belo Horizonte&#39;)</code>
+            <code class="ruby">    Client.create(name: &#39;Pedrinho&#39;, address: &#39;Rua um dia vai, 1234&#39;, state: &#39;Minas Gerais&#39;, city: &#39;Belo Horizonte&#39;, email: &#39;example@example.com&#39;)</code>
           </li>
         </div>
       
@@ -14150,7 +14150,7 @@
 
             
 
-            <code class="ruby">    Client.create(name: &#39;Pedro&#39;, address: &#39;Rua um dia, 134&#39;, state: &#39;São Paulo&#39;, city: &#39;São Paulo&#39;)</code>
+            <code class="ruby">    Client.create(name: &#39;Pedro&#39;, address: &#39;Rua um dia, 134&#39;, state: &#39;São Paulo&#39;, city: &#39;São Paulo&#39;, email: &#39;exaample@example.com&#39;)</code>
           </li>
         </div>
       
@@ -14327,8 +14327,8 @@
     
 
     <div class="t-line-summary">
-      <b>44</b> relevant lines.
-      <span class="green"><b>44</b> lines covered</span> and
+      <b>45</b> relevant lines.
+      <span class="green"><b>45</b> lines covered</span> and
       <span class="red"><b>0</b> lines missed.</span>
     </div>
 
@@ -14401,7 +14401,7 @@
 
             
 
-            <code class="ruby">    Client.create(name: &#39;Pedrinho&#39;, address: &#39;Rua um dia vai, 1234&#39;, state: &#39;Minas Gerais&#39;, city: &#39;Belo Horizonte&#39;)</code>
+            <code class="ruby">    Client.create(name: &#39;Pedrinho&#39;, address: &#39;Rua um dia vai, 1234&#39;, state: &#39;Minas Gerais&#39;, city: &#39;Belo Horizonte&#39;, email: &#39;example@example.com&#39;)</code>
           </li>
         </div>
       
@@ -14549,13 +14549,13 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="20">
-            
-            
-
+          <li class="covered" data-hits="1" data-linenumber="20">
+            <span class="hits">1</span>
             
 
-            <code class="ruby">  end </code>
+            
+
+            <code class="ruby">    expect(page).to have_field(&#39;Email&#39;, with: &#39;example@example.com&#39;)</code>
           </li>
         </div>
       
@@ -14566,18 +14566,18 @@
 
             
 
-            <code class="ruby"></code>
+            <code class="ruby">  end </code>
           </li>
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="22">
-            <span class="hits">1</span>
+          <li class="never" data-hits="" data-linenumber="22">
+            
             
 
             
 
-            <code class="ruby">  it &#39;success&#39; do</code>
+            <code class="ruby"></code>
           </li>
         </div>
       
@@ -14588,7 +14588,7 @@
 
             
 
-            <code class="ruby">    user = User.create(email: &#39;example@example.com&#39;, password: &#39;password&#39;)</code>
+            <code class="ruby">  it &#39;success&#39; do</code>
           </li>
         </div>
       
@@ -14599,29 +14599,29 @@
 
             
 
-            <code class="ruby">    Client.create(name: &#39;Pedrinho&#39;, address: &#39;Rua um dia vai, 1234&#39;, state: &#39;Minas Gerais&#39;, city: &#39;Belo Horizonte&#39;)</code>
+            <code class="ruby">    user = User.create(email: &#39;example@example.com&#39;, password: &#39;password&#39;)</code>
           </li>
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="25">
+          <li class="covered" data-hits="1" data-linenumber="25">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">    Client.create(name: &#39;Pedrinho&#39;, address: &#39;Rua um dia vai, 1234&#39;, state: &#39;Minas Gerais&#39;, city: &#39;Belo Horizonte&#39;, email: &#39;example@example.com&#39;)</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="26">
             
             
 
             
 
             <code class="ruby"></code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="covered" data-hits="1" data-linenumber="26">
-            <span class="hits">1</span>
-            
-
-            
-
-            <code class="ruby">    visit root_path</code>
           </li>
         </div>
       
@@ -14632,7 +14632,7 @@
 
             
 
-            <code class="ruby">    click_on &#39;Entrar&#39;</code>
+            <code class="ruby">    visit root_path</code>
           </li>
         </div>
       
@@ -14643,7 +14643,7 @@
 
             
 
-            <code class="ruby">    login_as(user)</code>
+            <code class="ruby">    click_on &#39;Entrar&#39;</code>
           </li>
         </div>
       
@@ -14654,7 +14654,7 @@
 
             
 
-            <code class="ruby">    click_on &#39;Log in&#39;</code>
+            <code class="ruby">    login_as(user)</code>
           </li>
         </div>
       
@@ -14665,7 +14665,7 @@
 
             
 
-            <code class="ruby">    click_on &#39;Clientes&#39;</code>
+            <code class="ruby">    click_on &#39;Log in&#39;</code>
           </li>
         </div>
       
@@ -14676,7 +14676,7 @@
 
             
 
-            <code class="ruby">    click_on &#39;Pedrinho&#39;</code>
+            <code class="ruby">    click_on &#39;Clientes&#39;</code>
           </li>
         </div>
       
@@ -14687,7 +14687,7 @@
 
             
 
-            <code class="ruby">    click_on &#39;Editar&#39;</code>
+            <code class="ruby">    click_on &#39;Pedrinho&#39;</code>
           </li>
         </div>
       
@@ -14698,7 +14698,7 @@
 
             
 
-            <code class="ruby">    fill_in &#39;Endereço&#39;,	with: &quot;Rua nova, 14&quot;</code>
+            <code class="ruby">    click_on &#39;Editar&#39;</code>
           </li>
         </div>
       
@@ -14709,18 +14709,18 @@
 
             
 
-            <code class="ruby">    click_on &#39;Cadastrar&#39;</code>
+            <code class="ruby">    fill_in &#39;Endereço&#39;,	with: &quot;Rua nova, 14&quot;</code>
           </li>
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="35">
-            
-            
-
+          <li class="covered" data-hits="1" data-linenumber="35">
+            <span class="hits">1</span>
             
 
-            <code class="ruby"></code>
+            
+
+            <code class="ruby">    click_on &#39;Cadastrar&#39;</code>
           </li>
         </div>
       
@@ -14736,13 +14736,13 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="37">
-            <span class="hits">1</span>
+          <li class="never" data-hits="" data-linenumber="37">
+            
             
 
             
 
-            <code class="ruby">    expect(page).to have_content &#39;Cliente atualizado com sucesso&#39;</code>
+            <code class="ruby"></code>
           </li>
         </div>
       
@@ -14753,7 +14753,7 @@
 
             
 
-            <code class="ruby">    expect(page).to have_content &#39;Nome: Pedrinho&#39;</code>
+            <code class="ruby">    expect(page).to have_content &#39;Cliente atualizado com sucesso&#39;</code>
           </li>
         </div>
       
@@ -14764,18 +14764,18 @@
 
             
 
-            <code class="ruby">    expect(page).to have_content &#39;Endereço: Rua nova, 14, Belo Horizonte - Minas Gerais&#39;</code>
+            <code class="ruby">    expect(page).to have_content &#39;Nome: Pedrinho&#39;</code>
           </li>
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="40">
-            
-            
-
+          <li class="covered" data-hits="1" data-linenumber="40">
+            <span class="hits">1</span>
             
 
-            <code class="ruby">  end</code>
+            
+
+            <code class="ruby">    expect(page).to have_content &#39;Endereço: Rua nova, 14, Belo Horizonte - Minas Gerais&#39;</code>
           </li>
         </div>
       
@@ -14786,18 +14786,18 @@
 
             
 
-            <code class="ruby"></code>
+            <code class="ruby">  end</code>
           </li>
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="42">
-            <span class="hits">1</span>
+          <li class="never" data-hits="" data-linenumber="42">
+            
             
 
             
 
-            <code class="ruby">  it &#39;fail&#39; do</code>
+            <code class="ruby"></code>
           </li>
         </div>
       
@@ -14808,7 +14808,7 @@
 
             
 
-            <code class="ruby">     user = User.create(email: &#39;example@example.com&#39;, password: &#39;password&#39;)</code>
+            <code class="ruby">  it &#39;fail&#39; do</code>
           </li>
         </div>
       
@@ -14819,29 +14819,29 @@
 
             
 
-            <code class="ruby">    Client.create(name: &#39;Pedrinho&#39;, address: &#39;Rua um dia vai, 1234&#39;, state: &#39;Minas Gerais&#39;, city: &#39;Belo Horizonte&#39;)</code>
+            <code class="ruby">     user = User.create(email: &#39;example@example.com&#39;, password: &#39;password&#39;)</code>
           </li>
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="45">
+          <li class="covered" data-hits="1" data-linenumber="45">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">    Client.create(name: &#39;Pedrinho&#39;, address: &#39;Rua um dia vai, 1234&#39;, state: &#39;Minas Gerais&#39;, city: &#39;Belo Horizonte&#39;, email: &#39;example@example.com&#39;)</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="46">
             
             
 
             
 
             <code class="ruby"></code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="covered" data-hits="1" data-linenumber="46">
-            <span class="hits">1</span>
-            
-
-            
-
-            <code class="ruby">    visit root_path</code>
           </li>
         </div>
       
@@ -14852,7 +14852,7 @@
 
             
 
-            <code class="ruby">    click_on &#39;Entrar&#39;</code>
+            <code class="ruby">    visit root_path</code>
           </li>
         </div>
       
@@ -14863,7 +14863,7 @@
 
             
 
-            <code class="ruby">    login_as(user)</code>
+            <code class="ruby">    click_on &#39;Entrar&#39;</code>
           </li>
         </div>
       
@@ -14874,7 +14874,7 @@
 
             
 
-            <code class="ruby">    click_on &#39;Log in&#39;</code>
+            <code class="ruby">    login_as(user)</code>
           </li>
         </div>
       
@@ -14885,7 +14885,7 @@
 
             
 
-            <code class="ruby">    click_on &#39;Clientes&#39;</code>
+            <code class="ruby">    click_on &#39;Log in&#39;</code>
           </li>
         </div>
       
@@ -14896,7 +14896,7 @@
 
             
 
-            <code class="ruby">    click_on &#39;Pedrinho&#39;</code>
+            <code class="ruby">    click_on &#39;Clientes&#39;</code>
           </li>
         </div>
       
@@ -14907,7 +14907,7 @@
 
             
 
-            <code class="ruby">    click_on &#39;Editar&#39;</code>
+            <code class="ruby">    click_on &#39;Pedrinho&#39;</code>
           </li>
         </div>
       
@@ -14918,7 +14918,7 @@
 
             
 
-            <code class="ruby">    fill_in &#39;Endereço&#39;,	with: &#39;&#39;</code>
+            <code class="ruby">    click_on &#39;Editar&#39;</code>
           </li>
         </div>
       
@@ -14929,12 +14929,23 @@
 
             
 
+            <code class="ruby">    fill_in &#39;Endereço&#39;,	with: &#39;&#39;</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="55">
+            <span class="hits">1</span>
+            
+
+            
+
             <code class="ruby">    click_on &#39;Cadastrar&#39;</code>
           </li>
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="55">
+          <li class="never" data-hits="" data-linenumber="56">
             
             
 
@@ -14945,7 +14956,7 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="56">
+          <li class="covered" data-hits="1" data-linenumber="57">
             <span class="hits">1</span>
             
 
@@ -14956,7 +14967,7 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="57">
+          <li class="never" data-hits="" data-linenumber="58">
             
             
 
@@ -14967,7 +14978,7 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="58">
+          <li class="never" data-hits="" data-linenumber="59">
             
             
 
@@ -14996,8 +15007,8 @@
     
 
     <div class="t-line-summary">
-      <b>42</b> relevant lines.
-      <span class="green"><b>42</b> lines covered</span> and
+      <b>46</b> relevant lines.
+      <span class="green"><b>46</b> lines covered</span> and
       <span class="red"><b>0</b> lines missed.</span>
     </div>
 
@@ -15229,13 +15240,13 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="21">
-            
-            
-
+          <li class="covered" data-hits="1" data-linenumber="21">
+            <span class="hits">1</span>
             
 
-            <code class="ruby">  end</code>
+            
+
+            <code class="ruby">    expect(page).to have_field &#39;Email&#39;</code>
           </li>
         </div>
       
@@ -15246,18 +15257,18 @@
 
             
 
-            <code class="ruby"></code>
+            <code class="ruby">  end</code>
           </li>
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="23">
-            <span class="hits">1</span>
+          <li class="never" data-hits="" data-linenumber="23">
+            
             
 
             
 
-            <code class="ruby">  it &#39;success&#39; do</code>
+            <code class="ruby"></code>
           </li>
         </div>
       
@@ -15268,29 +15279,29 @@
 
             
 
+            <code class="ruby">  it &#39;success&#39; do</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="25">
+            <span class="hits">1</span>
+            
+
+            
+
             <code class="ruby">    user = User.create(email: &#39;example@example.com&#39;, password: &#39;password&#39;)</code>
           </li>
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="25">
+          <li class="never" data-hits="" data-linenumber="26">
             
             
 
             
 
             <code class="ruby"></code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="covered" data-hits="1" data-linenumber="26">
-            <span class="hits">1</span>
-            
-
-            
-
-            <code class="ruby">    login_as(user)</code>
           </li>
         </div>
       
@@ -15301,7 +15312,7 @@
 
             
 
-            <code class="ruby">    visit clients_path</code>
+            <code class="ruby">    login_as(user)</code>
           </li>
         </div>
       
@@ -15312,7 +15323,7 @@
 
             
 
-            <code class="ruby">    click_on &#39;Cadastrar Cliente&#39;</code>
+            <code class="ruby">    visit clients_path</code>
           </li>
         </div>
       
@@ -15323,7 +15334,7 @@
 
             
 
-            <code class="ruby">    fill_in &#39;Nome&#39;, with: &#39;Pedro&#39;</code>
+            <code class="ruby">    click_on &#39;Cadastrar Cliente&#39;</code>
           </li>
         </div>
       
@@ -15334,7 +15345,7 @@
 
             
 
-            <code class="ruby">    fill_in &#39;Endereço&#39;, with: &#39;Rua da glória, 750&#39;</code>
+            <code class="ruby">    fill_in &#39;Nome&#39;, with: &#39;Pedro&#39;</code>
           </li>
         </div>
       
@@ -15345,7 +15356,7 @@
 
             
 
-            <code class="ruby">    fill_in &#39;Cidade&#39;, with: &#39;Crato&#39;</code>
+            <code class="ruby">    fill_in &#39;Endereço&#39;, with: &#39;Rua da glória, 750&#39;</code>
           </li>
         </div>
       
@@ -15356,7 +15367,7 @@
 
             
 
-            <code class="ruby">    fill_in &#39;Estado&#39;, with: &#39;Ceará&#39;</code>
+            <code class="ruby">    fill_in &#39;Cidade&#39;, with: &#39;Crato&#39;</code>
           </li>
         </div>
       
@@ -15367,18 +15378,18 @@
 
             
 
-            <code class="ruby">    click_on &#39;Cadastrar&#39;</code>
+            <code class="ruby">    fill_in &#39;Estado&#39;, with: &#39;Ceará&#39;</code>
           </li>
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="34">
-            
-            
-
+          <li class="covered" data-hits="1" data-linenumber="34">
+            <span class="hits">1</span>
             
 
-            <code class="ruby"></code>
+            
+
+            <code class="ruby">    fill_in &#39;Email&#39;, with: &#39;example@exam.com&#39;</code>
           </li>
         </div>
       
@@ -15389,18 +15400,18 @@
 
             
 
-            <code class="ruby">    expect(current_path).to eq clients_path</code>
+            <code class="ruby">    click_on &#39;Cadastrar&#39;</code>
           </li>
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="36">
-            <span class="hits">1</span>
+          <li class="never" data-hits="" data-linenumber="36">
+            
             
 
             
 
-            <code class="ruby">    expect(page).to have_content &#39;Cliente cadastrado&#39;</code>
+            <code class="ruby"></code>
           </li>
         </div>
       
@@ -15411,7 +15422,7 @@
 
             
 
-            <code class="ruby">    expect(page).to have_content &#39;Nome: Pedro&#39;</code>
+            <code class="ruby">    expect(current_path).to eq clients_path</code>
           </li>
         </div>
       
@@ -15422,12 +15433,34 @@
 
             
 
+            <code class="ruby">    expect(page).to have_content &#39;Cliente cadastrado&#39;</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="39">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">    expect(page).to have_content &#39;Nome: Pedro&#39;</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="40">
+            <span class="hits">1</span>
+            
+
+            
+
             <code class="ruby">    expect(page).to have_content &#39;Endereço: Rua da glória, 750, Crato - Ceará&#39;</code>
           </li>
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="39">
+          <li class="never" data-hits="" data-linenumber="41">
             
             
 
@@ -15438,7 +15471,7 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="40">
+          <li class="never" data-hits="" data-linenumber="42">
             
             
 
@@ -15449,7 +15482,7 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="41">
+          <li class="covered" data-hits="1" data-linenumber="43">
             <span class="hits">1</span>
             
 
@@ -15460,7 +15493,7 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="42">
+          <li class="covered" data-hits="1" data-linenumber="44">
             <span class="hits">1</span>
             
 
@@ -15471,35 +15504,13 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="43">
+          <li class="never" data-hits="" data-linenumber="45">
             
             
 
             
 
             <code class="ruby"></code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="covered" data-hits="1" data-linenumber="44">
-            <span class="hits">1</span>
-            
-
-            
-
-            <code class="ruby">    login_as(user)</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="covered" data-hits="1" data-linenumber="45">
-            <span class="hits">1</span>
-            
-
-            
-
-            <code class="ruby">    visit clients_path</code>
           </li>
         </div>
       
@@ -15510,7 +15521,7 @@
 
             
 
-            <code class="ruby">    click_on &#39;Cadastrar Cliente&#39;</code>
+            <code class="ruby">    login_as(user)</code>
           </li>
         </div>
       
@@ -15521,7 +15532,7 @@
 
             
 
-            <code class="ruby">    fill_in &#39;Nome&#39;, with: &#39;Pedro&#39;</code>
+            <code class="ruby">    visit clients_path</code>
           </li>
         </div>
       
@@ -15532,7 +15543,7 @@
 
             
 
-            <code class="ruby">    fill_in &#39;Endereço&#39;, with: &#39;&#39;</code>
+            <code class="ruby">    click_on &#39;Cadastrar Cliente&#39;</code>
           </li>
         </div>
       
@@ -15543,7 +15554,7 @@
 
             
 
-            <code class="ruby">    fill_in &#39;Cidade&#39;, with: &#39;Crato&#39;</code>
+            <code class="ruby">    fill_in &#39;Nome&#39;, with: &#39;Pedro&#39;</code>
           </li>
         </div>
       
@@ -15554,7 +15565,7 @@
 
             
 
-            <code class="ruby">    fill_in &#39;Estado&#39;, with: &#39;&#39;</code>
+            <code class="ruby">    fill_in &#39;Endereço&#39;, with: &#39;&#39;</code>
           </li>
         </div>
       
@@ -15565,18 +15576,18 @@
 
             
 
-            <code class="ruby">    click_on &#39;Cadastrar&#39;</code>
+            <code class="ruby">    fill_in &#39;Cidade&#39;, with: &#39;Crato&#39;</code>
           </li>
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="52">
-            
-            
-
+          <li class="covered" data-hits="1" data-linenumber="52">
+            <span class="hits">1</span>
             
 
-            <code class="ruby"></code>
+            
+
+            <code class="ruby">    fill_in &#39;Estado&#39;, with: &#39;&#39;</code>
           </li>
         </div>
       
@@ -15587,7 +15598,7 @@
 
             
 
-            <code class="ruby">    expect(page).to have_content &#39;Não foi possível cadastrar&#39;</code>
+            <code class="ruby">    fill_in &#39;Email&#39;, with: &#39;&#39;</code>
           </li>
         </div>
       
@@ -15598,18 +15609,18 @@
 
             
 
-            <code class="ruby">    expect(page).to have_content &#39;Verifique os erros abaixo:&#39;</code>
+            <code class="ruby">    click_on &#39;Cadastrar&#39;</code>
           </li>
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="55">
-            <span class="hits">1</span>
+          <li class="never" data-hits="" data-linenumber="55">
+            
             
 
             
 
-            <code class="ruby">    expect(page).to have_content &#39;Endereço não pode ficar em branco&#39;</code>
+            <code class="ruby"></code>
           </li>
         </div>
       
@@ -15620,12 +15631,56 @@
 
             
 
+            <code class="ruby">    expect(page).to have_content &#39;Não foi possível cadastrar&#39;</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="57">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">    expect(page).to have_content &#39;Verifique os erros abaixo:&#39;</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="58">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">    expect(page).to have_content &#39;Endereço não pode ficar em branco&#39;</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="59">
+            <span class="hits">1</span>
+            
+
+            
+
             <code class="ruby">    expect(page).to have_content &#39;Estado não pode ficar em branco&#39;</code>
           </li>
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="57">
+          <li class="covered" data-hits="1" data-linenumber="60">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">    expect(page).to have_content &#39;Email não pode ficar em branco&#39;</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="61">
             
             
 
@@ -15636,7 +15691,7 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="58">
+          <li class="never" data-hits="" data-linenumber="62">
             
             
 
@@ -15728,7 +15783,7 @@
 
             
 
-            <code class="ruby">    client = Client.create(name: &#39;Pedrinho&#39;, address: &#39;Rua um dia vai, 1234&#39;, state: &#39;Minas Gerais&#39;, city: &#39;Belo Horizonte&#39;)</code>
+            <code class="ruby">    client = Client.create(name: &#39;Pedrinho&#39;, address: &#39;Rua um dia vai, 1234&#39;, state: &#39;Minas Gerais&#39;, city: &#39;Belo Horizonte&#39;, email: &#39;pedrinho@example.com&#39;)</code>
           </li>
         </div>
       
@@ -15816,7 +15871,7 @@
 
             
 
-            <code class="ruby">    Client.create(name: &#39;Pedrinho&#39;, address: &#39;Rua um dia vai, 1234&#39;, state: &#39;Minas Gerais&#39;, city: &#39;Belo Horizonte&#39;)</code>
+            <code class="ruby">    Client.create(name: &#39;Pedrinho&#39;, address: &#39;Rua um dia vai, 1234&#39;, state: &#39;Minas Gerais&#39;, city: &#39;Belo Horizonte&#39;, email: &#39;pedrinho@example.com&#39;)</code>
           </li>
         </div>
       
@@ -15953,13 +16008,13 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="26">
-            
-            
-
+          <li class="covered" data-hits="1" data-linenumber="26">
+            <span class="hits">1</span>
             
 
-            <code class="ruby">  end</code>
+            
+
+            <code class="ruby">    expect(page).to have_content &#39;Email: pedrinho@example.com&#39;</code>
           </li>
         </div>
       
@@ -15970,18 +16025,18 @@
 
             
 
-            <code class="ruby"></code>
+            <code class="ruby">  end</code>
           </li>
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="28">
-            <span class="hits">1</span>
+          <li class="never" data-hits="" data-linenumber="28">
+            
             
 
             
 
-            <code class="ruby">  it &#39;return when clicks on Voltar&#39; do</code>
+            <code class="ruby"></code>
           </li>
         </div>
       
@@ -15992,7 +16047,7 @@
 
             
 
-            <code class="ruby">    user = User.create(email: &#39;example@example.com&#39;, password: &#39;password&#39;)</code>
+            <code class="ruby">  it &#39;return when clicks on Voltar&#39; do</code>
           </li>
         </div>
       
@@ -16003,29 +16058,29 @@
 
             
 
-            <code class="ruby">    Client.create(name: &#39;Pedrinho&#39;, address: &#39;Rua um dia vai, 1234&#39;, state: &#39;Minas Gerais&#39;, city: &#39;Belo Horizonte&#39;)</code>
+            <code class="ruby">    user = User.create(email: &#39;example@example.com&#39;, password: &#39;password&#39;)</code>
           </li>
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="31">
+          <li class="covered" data-hits="1" data-linenumber="31">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">    client = Client.create(name: &#39;Pedrinho&#39;, address: &#39;Rua um dia vai, 1234&#39;, state: &#39;Minas Gerais&#39;, city: &#39;Belo Horizonte&#39;, email: &#39;pedrinho@example.com&#39;)</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="32">
             
             
 
             
 
             <code class="ruby"></code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="covered" data-hits="1" data-linenumber="32">
-            <span class="hits">1</span>
-            
-
-            
-
-            <code class="ruby">    login_as(user)</code>
           </li>
         </div>
       
@@ -16036,23 +16091,12 @@
 
             
 
-            <code class="ruby">    client = Client.create(name: &#39;Pedrinho&#39;, address: &#39;Rua um dia vai, 1234&#39;, state: &#39;Minas Gerais&#39;, city: &#39;Belo Horizonte&#39;)</code>
+            <code class="ruby">    login_as(user)</code>
           </li>
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="34">
-            
-            
-
-            
-
-            <code class="ruby"></code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="covered" data-hits="1" data-linenumber="35">
+          <li class="covered" data-hits="1" data-linenumber="34">
             <span class="hits">1</span>
             
 
@@ -16063,7 +16107,7 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="36">
+          <li class="covered" data-hits="1" data-linenumber="35">
             <span class="hits">1</span>
             
 
@@ -16074,7 +16118,7 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="37">
+          <li class="never" data-hits="" data-linenumber="36">
             
             
 
@@ -16085,7 +16129,7 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="38">
+          <li class="covered" data-hits="1" data-linenumber="37">
             <span class="hits">1</span>
             
 
@@ -16096,7 +16140,7 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="39">
+          <li class="never" data-hits="" data-linenumber="38">
             
             
 
@@ -16107,7 +16151,7 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="40">
+          <li class="never" data-hits="" data-linenumber="39">
             
             
 
@@ -16265,7 +16309,7 @@
 
             
 
-            <code class="ruby">    Client.create(name:&#39;Pedro Gomes&#39;, state: &#39;Ceará&#39;, city: &#39;Fortaleza&#39;, address: &#39;Rua das lutas, 1000&#39;)</code>
+            <code class="ruby">    Client.create(name:&#39;Pedro Gomes&#39;, state: &#39;Ceará&#39;, city: &#39;Fortaleza&#39;, address: &#39;Rua das lutas, 1000&#39;, email: &#39;pedrinho@example.com&#39;)</code>
           </li>
         </div>
       
@@ -16276,7 +16320,7 @@
 
             
 
-            <code class="ruby">    Client.create(name:&#39;Pedro Júnior&#39;, state: &#39;Ceará&#39;, city: &#39;Fortaleza&#39;, address: &#39;Rua das lutas, 700&#39;)</code>
+            <code class="ruby">    Client.create(name:&#39;Pedro Júnior&#39;, state: &#39;Ceará&#39;, city: &#39;Fortaleza&#39;, address: &#39;Rua das lutas, 700&#39;, email: &#39;example@example.com&#39;)</code>
           </li>
         </div>
       
@@ -16978,7 +17022,7 @@
 
             
 
-            <code class="ruby">    new_client = Client.create(name:&#39;Pedro Gomes&#39;, state: &#39;Ceará&#39;, city: &#39;Fortaleza&#39;, address: &#39;Rua das lutas, 1000&#39;)</code>
+            <code class="ruby">    new_client = Client.create(name:&#39;Pedro Gomes&#39;, state: &#39;Ceará&#39;, city: &#39;Fortaleza&#39;, address: &#39;Rua das lutas, 1000&#39;, email: &#39;example@example.com&#39;)</code>
           </li>
         </div>
       
@@ -17176,7 +17220,7 @@
 
             
 
-            <code class="ruby">    new_client = Client.create(name:&#39;Pedro Gomes&#39;, state: &#39;Ceará&#39;, city: &#39;Fortaleza&#39;, address: &#39;Rua das lutas, 1000&#39;)</code>
+            <code class="ruby">    new_client = Client.create(name:&#39;Pedro Gomes&#39;, state: &#39;Ceará&#39;, city: &#39;Fortaleza&#39;, address: &#39;Rua das lutas, 1000&#39;, email: &#39;example@example.com&#39;)</code>
           </li>
         </div>
       
@@ -17449,7 +17493,7 @@
 
             
 
-            <code class="ruby">    new_client = Client.create(name:&#39;Pedro Gomes&#39;, state: &#39;Ceará&#39;, city: &#39;Fortaleza&#39;, address: &#39;Rua das lutas, 1000&#39;)</code>
+            <code class="ruby">    new_client = Client.create(name:&#39;Pedro Gomes&#39;, state: &#39;Ceará&#39;, city: &#39;Fortaleza&#39;, address: &#39;Rua das lutas, 1000&#39;, email: &#39;example@example.com&#39;)</code>
           </li>
         </div>
       
@@ -17733,7 +17777,7 @@
 
             
 
-            <code class="ruby">    new_client = Client.create(name:&#39;Pedro Gomes&#39;, state: &#39;Ceará&#39;, city: &#39;Fortaleza&#39;, address: &#39;Rua das lutas, 1000&#39;)</code>
+            <code class="ruby">    new_client = Client.create(name:&#39;Pedro Gomes&#39;, state: &#39;Ceará&#39;, city: &#39;Fortaleza&#39;, address: &#39;Rua das lutas, 1000&#39;, email: &#39;example@example.com&#39;)</code>
           </li>
         </div>
       
@@ -17876,7 +17920,7 @@
 
             
 
-            <code class="ruby">    new_client = Client.create(name:&#39;Pedro Gomes&#39;, state: &#39;Ceará&#39;, city: &#39;Fortaleza&#39;, address: &#39;Rua das lutas, 1000&#39;)</code>
+            <code class="ruby">    new_client = Client.create(name:&#39;Pedro Gomes&#39;, state: &#39;Ceará&#39;, city: &#39;Fortaleza&#39;, address: &#39;Rua das lutas, 1000&#39;, email: &#39;example@example.com&#39;)</code>
           </li>
         </div>
       
@@ -18140,7 +18184,7 @@
 
             
 
-            <code class="ruby">    new_client = Client.create(name:&#39;Pedro Gomes&#39;, state: &#39;Ceará&#39;, city: &#39;Fortaleza&#39;, address: &#39;Rua das lutas, 1000&#39;)</code>
+            <code class="ruby">    new_client = Client.create(name:&#39;Pedro Gomes&#39;, state: &#39;Ceará&#39;, city: &#39;Fortaleza&#39;, address: &#39;Rua das lutas, 1000&#39;, email: &#39;example@example.com&#39;)</code>
           </li>
         </div>
       
@@ -18468,7 +18512,7 @@
 
             
 
-            <code class="ruby">    new_client = Client.create(name:&#39;Pedro Gomes&#39;, state: &#39;Ceará&#39;, city: &#39;Fortaleza&#39;, address: &#39;Rua das lutas, 1000&#39;)</code>
+            <code class="ruby">    new_client = Client.create(name:&#39;Pedro Gomes&#39;, state: &#39;Ceará&#39;, city: &#39;Fortaleza&#39;, address: &#39;Rua das lutas, 1000&#39;, email: &#39;example@example.com&#39;)</code>
           </li>
         </div>
       
@@ -18611,7 +18655,7 @@
 
             
 
-            <code class="ruby">    new_client = Client.create(name:&#39;Pedro Gomes&#39;, state: &#39;Ceará&#39;, city: &#39;Fortaleza&#39;, address: &#39;Rua das lutas, 1000&#39;)</code>
+            <code class="ruby">    new_client = Client.create(name:&#39;Pedro Gomes&#39;, state: &#39;Ceará&#39;, city: &#39;Fortaleza&#39;, address: &#39;Rua das lutas, 1000&#39;, email: &#39;example@example.com&#39;)</code>
           </li>
         </div>
       
@@ -18853,7 +18897,7 @@
 
             
 
-            <code class="ruby">    new_client = Client.create(name:&#39;Pedro Gomes&#39;, state: &#39;Ceará&#39;, city: &#39;Fortaleza&#39;, address: &#39;Rua das lutas, 1000&#39;)</code>
+            <code class="ruby">    new_client = Client.create(name:&#39;Pedro Gomes&#39;, state: &#39;Ceará&#39;, city: &#39;Fortaleza&#39;, address: &#39;Rua das lutas, 1000&#39;, email: &#39;example@example.com&#39;)</code>
           </li>
         </div>
       
@@ -19192,7 +19236,7 @@
 
             
 
-            <code class="ruby">    new_client = Client.create(name:&#39;Pedro Gomes&#39;, state: &#39;Ceará&#39;, city: &#39;Fortaleza&#39;, address: &#39;Rua das lutas, 1000&#39;)</code>
+            <code class="ruby">    new_client = Client.create(name:&#39;Pedro Gomes&#39;, state: &#39;Ceará&#39;, city: &#39;Fortaleza&#39;, address: &#39;Rua das lutas, 1000&#39;, email: &#39;example@example.com&#39;)</code>
           </li>
         </div>
       

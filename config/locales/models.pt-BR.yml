@@ -8,6 +8,7 @@ pt-BR:
     attributes:
       client:
         name: Nome
+        email: Email
         address: Endereço
         city: Cidade
         state: Estado

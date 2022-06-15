@@ -3,7 +3,7 @@ require 'rails_helper'
 describe 'User deletes a client' do
   it 'success' do
     user = User.create(email: 'example@example.com', password: 'password')
-    Client.create(name: 'Pedrinho', address: 'Rua um dia vai, 1234', state: 'Minas Gerais', city: 'Belo Horizonte')
+    Client.create(name: 'Pedrinho', address: 'Rua um dia vai, 1234', state: 'Minas Gerais', city: 'Belo Horizonte', email: 'example@example.com')
 
     visit root_path
     click_on 'Entrar'
@@ -20,8 +20,8 @@ describe 'User deletes a client' do
 
   it 'does not delete others' do
     user = User.create(email: 'example@example.com', password: 'password')
-    Client.create(name: 'Pedrinho', address: 'Rua um dia vai, 1234', state: 'Minas Gerais', city: 'Belo Horizonte')
-    Client.create(name: 'Pedro', address: 'Rua um dia, 134', state: 'São Paulo', city: 'São Paulo')
+    Client.create(name: 'Pedrinho', address: 'Rua um dia vai, 1234', state: 'Minas Gerais', city: 'Belo Horizonte', email: 'example@example.com')
+    Client.create(name: 'Pedro', address: 'Rua um dia, 134', state: 'São Paulo', city: 'São Paulo', email: 'exaample@example.com')
     
     visit root_path
     click_on 'Entrar'

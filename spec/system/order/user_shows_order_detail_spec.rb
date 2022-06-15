@@ -3,7 +3,7 @@ require 'rails_helper'
 describe 'User views orders details' do
   it 'and must log in' do
     user = User.create(email: 'example@example.com', password: 'password')
-    new_client = Client.create(name:'Pedro Gomes', state: 'Ceará', city: 'Fortaleza', address: 'Rua das lutas, 1000')
+    new_client = Client.create(name:'Pedro Gomes', state: 'Ceará', city: 'Fortaleza', address: 'Rua das lutas, 1000', email: 'example@example.com')
     new_category = Category.create(name: 'Phone')
     new_product = Product.create(name: 'Case', value: 10, base_value: 7, image_url: 'http://www.example.com', category: new_category)
     new_order = Order.create(status: 1, value: 10, payment_date: Date.today, client: new_client)
@@ -16,7 +16,7 @@ describe 'User views orders details' do
 
   it 'success' do
     user = User.create(email: 'example@example.com', password: 'password')
-    new_client = Client.create(name:'Pedro Gomes', state: 'Ceará', city: 'Fortaleza', address: 'Rua das lutas, 1000')
+    new_client = Client.create(name:'Pedro Gomes', state: 'Ceará', city: 'Fortaleza', address: 'Rua das lutas, 1000', email: 'example@example.com')
     new_category = Category.create(name: 'Phone')
     new_product = Product.create(name: 'Case', value: 10, base_value: 7, image_url: 'http://www.example.com', category: new_category)
     new_order = Order.create(status: 1, value: 10, payment_date: Date.today, client: new_client)
@@ -38,7 +38,7 @@ describe 'User views orders details' do
 
   it 'return when clicks on Voltar' do
     user = User.create(email: 'example@example.com', password: 'password')
-    new_client = Client.create(name:'Pedro Gomes', state: 'Ceará', city: 'Fortaleza', address: 'Rua das lutas, 1000')
+    new_client = Client.create(name:'Pedro Gomes', state: 'Ceará', city: 'Fortaleza', address: 'Rua das lutas, 1000', email: 'example@example.com')
     new_category = Category.create(name: 'Phone')
     new_product = Product.create(name: 'Case', value: 10, base_value: 7, image_url: 'http://www.example.com', category: new_category)
     new_order = Order.create(status: 1, value: 10, payment_date: Date.today, client: new_client)
