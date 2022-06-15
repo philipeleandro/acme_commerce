@@ -1,0 +1,17 @@
+<%= form_with(model: @order, data: { turbo: false }) do |f| %>
+  <div>
+    <%= f.label :payment_date %>
+    <%= f.date_field :payment_date %>
+  </div>
+  <div>
+    <%= f.label :client_id %>
+    <%= f.collection_select :client_id, Client.order(:name), :id, :name%>
+  </div>
+  <div>
+    <%= f.label :product_id %>
+    <%= f.collection_select :product_id, Product.order(:name), :id, :name%>
+  </div>
+  <div>
+    <%= f.submit 'Cadastrar' %>
+  </div>
+<% end %>

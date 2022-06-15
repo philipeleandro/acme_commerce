@@ -3,7 +3,8 @@ pt-BR:
     models:
       client: Cliente
       category: Categoria
-      prodcut: 'Produto'
+      product: 'Produto'
+      order: Ordem
     attributes:
       client:
         name: Nome
@@ -18,3 +19,9 @@ pt-BR:
         base_value: Valor Base
         image_url: Imagem
         category_id: Categoria
+      order:
+        status: Status
+        reference_number: Número de Referencia
+        payment_date: Data de Pagamento
+        client_id: Cliente
+        product_id: Produto

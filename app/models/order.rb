@@ -3,6 +3,7 @@ class Order < ApplicationRecord
   enum status: { sent: 0, waiting: 1, production: 2, canceled: 3, delivered: 4, posting: 5 }
 
   belongs_to :client
+  attribute :product_id
 
   before_validation :generate_code
   attribute :status, default: 2

@@ -1,0 +1,14 @@
+<h1>Cadastre nova Ordem</h1>
+
+<% if @order.errors.any? %>
+  <p>Verifique os erros abaixo:</p>
+  <ul>
+  <% @order.errors.full_messages.each do |msg|%>
+    <li><%= msg %></li>
+  <% end %>
+  </ul>
+<% else %>
+  <%= render 'form' %>
+<% end %>
+
+<%= link_to 'Voltar', orders_path %>
