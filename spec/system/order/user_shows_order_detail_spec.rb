@@ -33,6 +33,7 @@ describe 'User views orders details' do
     expect(page).to have_content "Valor: #{new_order.value}"
     expect(page).to have_content "Status: #{new_order.status}" 
     expect(page).to have_content "Cliente: Pedro Gomes" 
+    expect(page).to have_content "Case - R$ 10.0"
   end
 
   it 'return when clicks on Voltar' do

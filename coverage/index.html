@@ -14,7 +14,7 @@
       <img src="./assets/0.12.3/loading.gif" alt="loading"/>
     </div>
     <div id="wrapper" class="hide">
-      <div class="timestamp">Generated <abbr class="timeago" title="2022-06-15T12:38:03-03:00">2022-06-15T12:38:03-03:00</abbr></div>
+      <div class="timestamp">Generated <abbr class="timeago" title="2022-06-15T13:02:57-03:00">2022-06-15T13:02:57-03:00</abbr></div>
       <ul class="group_tabs"></ul>
 
       <div id="content">
@@ -43,8 +43,8 @@
   </div>
 
   <div class="t-line-summary">
-    <b>974</b> relevant lines,
-    <span class="green"><b>974</b> lines covered</span> and
+    <b>975</b> relevant lines,
+    <span class="green"><b>975</b> lines covered</span> and
     <span class="red"><b>0</b> lines missed. </span>
     (<span class="green">
   100.0%
@@ -557,9 +557,9 @@
           <tr class="t-file">
             <td class="strong t-file__name"><a href="#2f86410bf228c32e83e7d7b6941c6e8821932349" class="src_link" title="spec/system/order/user_shows_order_detail_spec.rb">spec/system/order/user_shows_order_detail_spec.rb</a></td>
             <td class="green strong cell--number t-file__coverage">100.00 %</td>
-            <td class="cell--number">56</td>
-            <td class="cell--number">43</td>
-            <td class="cell--number">43</td>
+            <td class="cell--number">57</td>
+            <td class="cell--number">44</td>
+            <td class="cell--number">44</td>
             <td class="cell--number">0</td>
             <td class="cell--number">1.00</td>
             
@@ -18394,8 +18394,8 @@
     
 
     <div class="t-line-summary">
-      <b>43</b> relevant lines.
-      <span class="green"><b>43</b> lines covered</span> and
+      <b>44</b> relevant lines.
+      <span class="green"><b>44</b> lines covered</span> and
       <span class="red"><b>0</b> lines missed.</span>
     </div>
 
@@ -18792,13 +18792,13 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="36">
-            
-            
-
+          <li class="covered" data-hits="1" data-linenumber="36">
+            <span class="hits">1</span>
             
 
-            <code class="ruby">  end</code>
+            
+
+            <code class="ruby">    expect(page).to have_content &quot;Case - R$ 10.0&quot;</code>
           </li>
         </div>
       
@@ -18809,18 +18809,18 @@
 
             
 
-            <code class="ruby"></code>
+            <code class="ruby">  end</code>
           </li>
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="38">
-            <span class="hits">1</span>
+          <li class="never" data-hits="" data-linenumber="38">
+            
             
 
             
 
-            <code class="ruby">  it &#39;return when clicks on Voltar&#39; do</code>
+            <code class="ruby"></code>
           </li>
         </div>
       
@@ -18831,7 +18831,7 @@
 
             
 
-            <code class="ruby">    user = User.create(email: &#39;example@example.com&#39;, password: &#39;password&#39;)</code>
+            <code class="ruby">  it &#39;return when clicks on Voltar&#39; do</code>
           </li>
         </div>
       
@@ -18842,7 +18842,7 @@
 
             
 
-            <code class="ruby">    new_client = Client.create(name:&#39;Pedro Gomes&#39;, state: &#39;Ceará&#39;, city: &#39;Fortaleza&#39;, address: &#39;Rua das lutas, 1000&#39;)</code>
+            <code class="ruby">    user = User.create(email: &#39;example@example.com&#39;, password: &#39;password&#39;)</code>
           </li>
         </div>
       
@@ -18853,7 +18853,7 @@
 
             
 
-            <code class="ruby">    new_category = Category.create(name: &#39;Phone&#39;)</code>
+            <code class="ruby">    new_client = Client.create(name:&#39;Pedro Gomes&#39;, state: &#39;Ceará&#39;, city: &#39;Fortaleza&#39;, address: &#39;Rua das lutas, 1000&#39;)</code>
           </li>
         </div>
       
@@ -18864,7 +18864,7 @@
 
             
 
-            <code class="ruby">    new_product = Product.create(name: &#39;Case&#39;, value: 10, base_value: 7, image_url: &#39;http://www.example.com&#39;, category: new_category)</code>
+            <code class="ruby">    new_category = Category.create(name: &#39;Phone&#39;)</code>
           </li>
         </div>
       
@@ -18875,7 +18875,7 @@
 
             
 
-            <code class="ruby">    new_order = Order.create(status: 1, value: 10, payment_date: Date.today, client: new_client)</code>
+            <code class="ruby">    new_product = Product.create(name: &#39;Case&#39;, value: 10, base_value: 7, image_url: &#39;http://www.example.com&#39;, category: new_category)</code>
           </li>
         </div>
       
@@ -18886,29 +18886,29 @@
 
             
 
+            <code class="ruby">    new_order = Order.create(status: 1, value: 10, payment_date: Date.today, client: new_client)</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="45">
+            <span class="hits">1</span>
+            
+
+            
+
             <code class="ruby">    order_product = OrderProduct.create(order_id: new_order.id, product_id: new_product.id)</code>
           </li>
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="45">
+          <li class="never" data-hits="" data-linenumber="46">
             
             
 
             
 
             <code class="ruby"></code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="covered" data-hits="1" data-linenumber="46">
-            <span class="hits">1</span>
-            
-
-            
-
-            <code class="ruby">    visit root_path</code>
           </li>
         </div>
       
@@ -18919,7 +18919,7 @@
 
             
 
-            <code class="ruby">    click_on &#39;Entrar&#39;</code>
+            <code class="ruby">    visit root_path</code>
           </li>
         </div>
       
@@ -18930,7 +18930,7 @@
 
             
 
-            <code class="ruby">    login_as(user)</code>
+            <code class="ruby">    click_on &#39;Entrar&#39;</code>
           </li>
         </div>
       
@@ -18941,7 +18941,7 @@
 
             
 
-            <code class="ruby">    click_on &#39;Log in&#39;</code>
+            <code class="ruby">    login_as(user)</code>
           </li>
         </div>
       
@@ -18952,7 +18952,7 @@
 
             
 
-            <code class="ruby">    click_on &#39;Ordens&#39;</code>
+            <code class="ruby">    click_on &#39;Log in&#39;</code>
           </li>
         </div>
       
@@ -18963,7 +18963,7 @@
 
             
 
-            <code class="ruby">    click_on &quot;#{new_order.reference_number}&quot;</code>
+            <code class="ruby">    click_on &#39;Ordens&#39;</code>
           </li>
         </div>
       
@@ -18974,12 +18974,23 @@
 
             
 
+            <code class="ruby">    click_on &quot;#{new_order.reference_number}&quot;</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="53">
+            <span class="hits">1</span>
+            
+
+            
+
             <code class="ruby">    click_on &#39;Voltar&#39;</code>
           </li>
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="53">
+          <li class="never" data-hits="" data-linenumber="54">
             
             
 
@@ -18990,7 +19001,7 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="54">
+          <li class="covered" data-hits="1" data-linenumber="55">
             <span class="hits">1</span>
             
 
@@ -19001,7 +19012,7 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="55">
+          <li class="never" data-hits="" data-linenumber="56">
             
             
 
@@ -19012,7 +19023,7 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="56">
+          <li class="never" data-hits="" data-linenumber="57">
             
             
 
