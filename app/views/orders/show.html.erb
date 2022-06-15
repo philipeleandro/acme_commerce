@@ -1,0 +1,18 @@
+<h1>Detalhes - <%= @order.reference_number %></h1>
+
+<div>
+  <dl>
+    <dt><strong>Número de Referencia: </strong></dt>
+    <dd><%= @order.reference_number %></dd>
+    <dt><strong>Valor: </strong></dt>
+    <dd><%= @order.value %></dd>
+    <dt><strong>Cliente: </strong></dt>
+    <dd><%= Client.find(@order.client_id).name %></dd>
+    <dt><strong>Status: </strong></dt>
+    <dd><%= @order.status %></dd>
+  </dl>
+</div>
+
+<div>
+  <%= link_to 'Voltar', orders_path %>
+</div>

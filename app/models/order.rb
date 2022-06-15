@@ -11,4 +11,7 @@ class Order < ApplicationRecord
   def generate_code
     self.reference_number = SecureRandom.random_number(9999999999999)
   end
+
+  def sum_product_val
+  end
 end

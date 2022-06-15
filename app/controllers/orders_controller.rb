@@ -1,6 +1,6 @@
 class OrdersController < ApplicationController
-  before_action :authenticate_user!, only: [:index, :new, :create]
-
+  before_action :authenticate_user!, only: [:index, :new, :create, :show]
+  
   def index
     @orders = Order.all
   end
@@ -22,6 +22,10 @@ class OrdersController < ApplicationController
       flash.now[:notice] = 'Não foi possível cadastrar'
       render 'new'
     end
+  end
+
+  def show
+    @order = Order.find(params[:id])
   end
 
   def order_params
