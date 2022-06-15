@@ -12,6 +12,10 @@
     <%= f.collection_select :product_id, Product.order(:name), :id, :name%>
   </div>
   <div>
+    <%= f.label :value %>
+    <%= f.number_field :value, step: '0.01' %>
+  </div>
+  <div>
     <%= f.submit 'Cadastrar' %>
   </div>
 <% end %>

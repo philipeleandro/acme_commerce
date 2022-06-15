@@ -14,7 +14,6 @@ class OrdersController < ApplicationController
 
     if @order.save
       order_product = OrderProduct.new(order_id: @order.id, product_id: params['order']['product_id'].to_i)
-      order_product.order_id = @order.id
       order_product.save
 
       redirect_to orders_path, notice: 'Ordem cadastrado'
@@ -50,6 +49,7 @@ class OrdersController < ApplicationController
     end
   end
 
+  private
   def order_params
     params.require(:order).permit(:reference_number, :status, :payment_date, :value, :client_id, :product_id)
   end

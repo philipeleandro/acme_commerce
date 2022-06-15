@@ -25,20 +25,17 @@ describe 'User register a new order' do
     new_client = Client.create(name:'Pedro Gomes', state: 'Ceará', city: 'Fortaleza', address: 'Rua das lutas, 1000')
     new_category = Category.create(name: 'Phone')
     new_product = Product.create(name: 'Case', value: 10, base_value: 7, image_url: 'http://www.example.com', category: new_category)
-    new_order = Order.create(status: 1, payment_date: Date.today, client: new_client)
-    order_product = OrderProduct.create(order_id: new_order.id, product_id: new_product.id)
 
     login_as(user)
     visit root_path
     click_on 'Ordens'
     click_on 'Cadastrar nova ordem'
     fill_in 'Data de Pagamento', with: Date.today
+    fill_in 'Valor', with: 10
     select 'Case', from: 'Produto'
     click_on 'Cadastrar'
     
-    expect(page).to have_content "Ordem: #{new_order.reference_number}"
-    expect(page).to have_content 'Valor: R$ 10.00'
-    expect(page).to have_content "Data de Pagamento: #{I18n.localize(Date.today)}"
+    expect(page).to have_content 'Valor: R$ 10.0'
   end
 
   it 'fail' do

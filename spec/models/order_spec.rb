@@ -46,7 +46,7 @@ RSpec.describe Order, type: :model do
         new_client = Client.create(name:'Pedro Gomes', state: 'Ceará', city: 'Fortaleza', address: 'Rua das lutas, 1000')
         new_category = Category.create(name: 'Phone')
         new_product = Product.create(name: 'Case', value: 10, base_value: 7, image_url: 'http://www.example.com', category: new_category)
-        new_order = Order.new(status: 1, payment_date: Date.today, client: new_client)
+        new_order = Order.new(status: 1, value: 10, payment_date: Date.today, client: new_client)
         order_product = OrderProduct.create(order_id: new_order.id, product_id: new_product.id)
 
         new_order.save!
@@ -62,7 +62,7 @@ RSpec.describe Order, type: :model do
         new_client = Client.create(name:'Pedro Gomes', state: 'Ceará', city: 'Fortaleza', address: 'Rua das lutas, 1000')
         new_category = Category.create(name: 'Phone')
         new_product = Product.create(name: 'Case', value: 10, base_value: 7, image_url: 'http://www.example.com', category: new_category)
-        new_order = Order.new(payment_date: Date.today, client: new_client)
+        new_order = Order.new(payment_date: Date.today, value: 10, client: new_client)
         order_product = OrderProduct.create(order_id: new_order.id, product_id: new_product.id)
 
         expect(new_order.status).to eq('production')
