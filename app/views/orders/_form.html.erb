@@ -1,5 +1,9 @@
 <%= form_with(model: @order, data: { turbo: false }) do |f| %>
   <div>
+    <%= f.label :reference_number %>
+    <%= f.text_field :reference_number %>
+  </div>
+  <div>
     <%= f.label :payment_date %>
     <%= f.date_field :payment_date %>
   </div>

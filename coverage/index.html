@@ -14,7 +14,7 @@
       <img src="./assets/0.12.3/loading.gif" alt="loading"/>
     </div>
     <div id="wrapper" class="hide">
-      <div class="timestamp">Generated <abbr class="timeago" title="2022-06-15T14:42:37-03:00">2022-06-15T14:42:37-03:00</abbr></div>
+      <div class="timestamp">Generated <abbr class="timeago" title="2022-06-15T20:51:51-03:00">2022-06-15T20:51:51-03:00</abbr></div>
       <ul class="group_tabs"></ul>
 
       <div id="content">
@@ -30,7 +30,7 @@
      covered at
      <span class="covered_strength">
        <span class="green">
-         1.13
+         1.11
        </span>
     </span> hits/line
     )
@@ -43,8 +43,8 @@
   </div>
 
   <div class="t-line-summary">
-    <b>980</b> relevant lines,
-    <span class="green"><b>980</b> lines covered</span> and
+    <b>967</b> relevant lines,
+    <span class="green"><b>967</b> lines covered</span> and
     <span class="red"><b>0</b> lines missed. </span>
     (<span class="green">
   100.0%
@@ -183,11 +183,11 @@
           <tr class="t-file">
             <td class="strong t-file__name"><a href="#c7a131894ec44f89339f5864212a2d6e1b643228" class="src_link" title="app/models/order.rb">app/models/order.rb</a></td>
             <td class="green strong cell--number t-file__coverage">100.00 %</td>
-            <td class="cell--number">14</td>
             <td class="cell--number">9</td>
-            <td class="cell--number">9</td>
+            <td class="cell--number">6</td>
+            <td class="cell--number">6</td>
             <td class="cell--number">0</td>
-            <td class="cell--number">3.00</td>
+            <td class="cell--number">1.00</td>
             
           </tr>
         
@@ -381,9 +381,9 @@
           <tr class="t-file">
             <td class="strong t-file__name"><a href="#f7572322e2c36a25a1e4919fe598e270d58753a9" class="src_link" title="spec/models/order_spec.rb">spec/models/order_spec.rb</a></td>
             <td class="green strong cell--number t-file__coverage">100.00 %</td>
-            <td class="cell--number">73</td>
-            <td class="cell--number">44</td>
-            <td class="cell--number">44</td>
+            <td class="cell--number">57</td>
+            <td class="cell--number">33</td>
+            <td class="cell--number">33</td>
             <td class="cell--number">0</td>
             <td class="cell--number">1.00</td>
             
@@ -524,9 +524,9 @@
           <tr class="t-file">
             <td class="strong t-file__name"><a href="#53ec194dbb89bbd65982c4463c49400b72a491ce" class="src_link" title="spec/system/order/user_creates_order_spec.rb">spec/system/order/user_creates_order_spec.rb</a></td>
             <td class="green strong cell--number t-file__coverage">100.00 %</td>
-            <td class="cell--number">59</td>
-            <td class="cell--number">42</td>
-            <td class="cell--number">42</td>
+            <td class="cell--number">60</td>
+            <td class="cell--number">43</td>
+            <td class="cell--number">43</td>
             <td class="cell--number">0</td>
             <td class="cell--number">1.00</td>
             
@@ -3524,8 +3524,8 @@
     
 
     <div class="t-line-summary">
-      <b>9</b> relevant lines.
-      <span class="green"><b>9</b> lines covered</span> and
+      <b>6</b> relevant lines.
+      <span class="green"><b>6</b> lines covered</span> and
       <span class="red"><b>0</b> lines missed.</span>
     </div>
 
@@ -3554,7 +3554,7 @@
 
             
 
-            <code class="ruby">  validates :reference_number, :payment_date, :value, :status, presence: true</code>
+            <code class="ruby">  validates  :reference_number, :payment_date, :value, :status, presence: true</code>
           </li>
         </div>
       
@@ -3565,7 +3565,7 @@
 
             
 
-            <code class="ruby">  enum status: { sent: 0, waiting: 1, production: 2, canceled: 3, delivered: 4, posting: 5 }</code>
+            <code class="ruby">  enum status: { sent: 0, waiting: 1, production: 2, canceled: 3, delivered: 4, posting: 5, picking: 6 }</code>
           </li>
         </div>
       
@@ -3620,67 +3620,12 @@
 
             
 
-            <code class="ruby">  before_validation :generate_code</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="covered" data-hits="1" data-linenumber="9">
-            <span class="hits">1</span>
-            
-
-            
-
             <code class="ruby">  attribute :status, default: 2</code>
           </li>
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="10">
-            
-            
-
-            
-
-            <code class="ruby"></code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="covered" data-hits="1" data-linenumber="11">
-            <span class="hits">1</span>
-            
-
-            
-
-            <code class="ruby">  def generate_code</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="covered" data-hits="19" data-linenumber="12">
-            <span class="hits">19</span>
-            
-
-            
-
-            <code class="ruby">    self.reference_number = SecureRandom.random_number(9999999999999)</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="13">
-            
-            
-
-            
-
-            <code class="ruby">  end</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="14">
+          <li class="never" data-hits="" data-linenumber="9">
             
             
 
@@ -10275,8 +10220,8 @@
     
 
     <div class="t-line-summary">
-      <b>44</b> relevant lines.
-      <span class="green"><b>44</b> lines covered</span> and
+      <b>33</b> relevant lines.
+      <span class="green"><b>33</b> lines covered</span> and
       <span class="red"><b>0</b> lines missed.</span>
     </div>
 
@@ -10756,7 +10701,7 @@
 
             
 
-            <code class="ruby">    context &#39;generate code&#39; do</code>
+            <code class="ruby">    context &#39;status&#39; do</code>
           </li>
         </div>
       
@@ -10767,7 +10712,7 @@
 
             
 
-            <code class="ruby">      it &#39;when create a new order&#39; do</code>
+            <code class="ruby">      it &#39;must be production when created&#39; do</code>
           </li>
         </div>
       
@@ -10822,7 +10767,7 @@
 
             
 
-            <code class="ruby">        new_order = Order.new(status: 1, value: 10, payment_date: Date.today, client: new_client)</code>
+            <code class="ruby">        new_order = Order.new(payment_date: Date.today, value: 10, client: new_client)</code>
           </li>
         </div>
       
@@ -10855,18 +10800,18 @@
 
             
 
-            <code class="ruby">        new_order.save!</code>
+            <code class="ruby">        expect(new_order.status).to eq(&#39;production&#39;)</code>
           </li>
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="53">
-            <span class="hits">1</span>
+          <li class="never" data-hits="" data-linenumber="53">
+            
             
 
             
 
-            <code class="ruby">        result = new_order.reference_number</code>
+            <code class="ruby">      end</code>
           </li>
         </div>
       
@@ -10877,188 +10822,12 @@
 
             
 
-            <code class="ruby"></code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="covered" data-hits="1" data-linenumber="55">
-            <span class="hits">1</span>
-            
-
-            
-
-            <code class="ruby">        expect(result).not_to be_empty</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="56">
-            
-            
-
-            
-
-            <code class="ruby">      end</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="57">
-            
-            
-
-            
-
             <code class="ruby">    end</code>
           </li>
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="58">
-            
-            
-
-            
-
-            <code class="ruby"></code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="covered" data-hits="1" data-linenumber="59">
-            <span class="hits">1</span>
-            
-
-            
-
-            <code class="ruby">    context &#39;status&#39; do</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="covered" data-hits="1" data-linenumber="60">
-            <span class="hits">1</span>
-            
-
-            
-
-            <code class="ruby">      it &#39;must be production when created&#39; do</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="covered" data-hits="1" data-linenumber="61">
-            <span class="hits">1</span>
-            
-
-            
-
-            <code class="ruby">        user = User.create(email: &#39;example@example.com&#39;, password: &#39;password&#39;)</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="covered" data-hits="1" data-linenumber="62">
-            <span class="hits">1</span>
-            
-
-            
-
-            <code class="ruby">        new_client = Client.create(name:&#39;Pedro Gomes&#39;, state: &#39;Ceará&#39;, city: &#39;Fortaleza&#39;, address: &#39;Rua das lutas, 1000&#39;, email: &#39;example@example.com&#39;)</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="covered" data-hits="1" data-linenumber="63">
-            <span class="hits">1</span>
-            
-
-            
-
-            <code class="ruby">        new_category = Category.create(name: &#39;Phone&#39;)</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="covered" data-hits="1" data-linenumber="64">
-            <span class="hits">1</span>
-            
-
-            
-
-            <code class="ruby">        new_product = Product.create(name: &#39;Case&#39;, value: 10, base_value: 7, image_url: &#39;http://www.example.com&#39;, category: new_category)</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="covered" data-hits="1" data-linenumber="65">
-            <span class="hits">1</span>
-            
-
-            
-
-            <code class="ruby">        new_order = Order.new(payment_date: Date.today, value: 10, client: new_client)</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="covered" data-hits="1" data-linenumber="66">
-            <span class="hits">1</span>
-            
-
-            
-
-            <code class="ruby">        order_product = OrderProduct.create(order_id: new_order.id, product_id: new_product.id)</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="67">
-            
-            
-
-            
-
-            <code class="ruby"></code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="covered" data-hits="1" data-linenumber="68">
-            <span class="hits">1</span>
-            
-
-            
-
-            <code class="ruby">        expect(new_order.status).to eq(&#39;production&#39;)</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="69">
-            
-            
-
-            
-
-            <code class="ruby">      end</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="70">
-            
-            
-
-            
-
-            <code class="ruby">    end</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="71">
+          <li class="never" data-hits="" data-linenumber="55">
             
             
 
@@ -11069,7 +10838,7 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="72">
+          <li class="never" data-hits="" data-linenumber="56">
             
             
 
@@ -11080,7 +10849,7 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="73">
+          <li class="never" data-hits="" data-linenumber="57">
             
             
 
@@ -16739,8 +16508,8 @@
     
 
     <div class="t-line-summary">
-      <b>42</b> relevant lines.
-      <span class="green"><b>42</b> lines covered</span> and
+      <b>43</b> relevant lines.
+      <span class="green"><b>43</b> lines covered</span> and
       <span class="red"><b>0</b> lines missed.</span>
     </div>
 
@@ -17132,7 +16901,7 @@
 
             
 
-            <code class="ruby">    select &#39;Case&#39;, from: &#39;Produto&#39;</code>
+            <code class="ruby">    fill_in &#39;Número de Referencia&#39;, with: &#39;1233456&#39;</code>
           </li>
         </div>
       
@@ -17143,12 +16912,23 @@
 
             
 
+            <code class="ruby">    select &#39;Case&#39;, from: &#39;Produto&#39;</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="37">
+            <span class="hits">1</span>
+            
+
+            
+
             <code class="ruby">    click_on &#39;Cadastrar&#39;</code>
           </li>
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="37">
+          <li class="never" data-hits="" data-linenumber="38">
             
             
 
@@ -17159,7 +16939,7 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="38">
+          <li class="covered" data-hits="1" data-linenumber="39">
             <span class="hits">1</span>
             
 
@@ -17170,7 +16950,7 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="39">
+          <li class="never" data-hits="" data-linenumber="40">
             
             
 
@@ -17181,24 +16961,13 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="40">
+          <li class="never" data-hits="" data-linenumber="41">
             
             
 
             
 
             <code class="ruby"></code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="covered" data-hits="1" data-linenumber="41">
-            <span class="hits">1</span>
-            
-
-            
-
-            <code class="ruby">  it &#39;fail&#39; do</code>
           </li>
         </div>
       
@@ -17209,7 +16978,7 @@
 
             
 
-            <code class="ruby">    user = User.create(email: &#39;example@example.com&#39;, password: &#39;password&#39;)</code>
+            <code class="ruby">  it &#39;fail&#39; do</code>
           </li>
         </div>
       
@@ -17220,7 +16989,7 @@
 
             
 
-            <code class="ruby">    new_client = Client.create(name:&#39;Pedro Gomes&#39;, state: &#39;Ceará&#39;, city: &#39;Fortaleza&#39;, address: &#39;Rua das lutas, 1000&#39;, email: &#39;example@example.com&#39;)</code>
+            <code class="ruby">    user = User.create(email: &#39;example@example.com&#39;, password: &#39;password&#39;)</code>
           </li>
         </div>
       
@@ -17231,7 +17000,7 @@
 
             
 
-            <code class="ruby">    new_category = Category.create(name: &#39;Phone&#39;)</code>
+            <code class="ruby">    new_client = Client.create(name:&#39;Pedro Gomes&#39;, state: &#39;Ceará&#39;, city: &#39;Fortaleza&#39;, address: &#39;Rua das lutas, 1000&#39;, email: &#39;example@example.com&#39;)</code>
           </li>
         </div>
       
@@ -17242,7 +17011,7 @@
 
             
 
-            <code class="ruby">    new_product = Product.create(name: &#39;Case&#39;, value: 10, base_value: 7, image_url: &#39;http://www.example.com&#39;, category: new_category)</code>
+            <code class="ruby">    new_category = Category.create(name: &#39;Phone&#39;)</code>
           </li>
         </div>
       
@@ -17253,7 +17022,7 @@
 
             
 
-            <code class="ruby">    new_order = Order.create(status: 1, payment_date: Date.today, client: new_client)</code>
+            <code class="ruby">    new_product = Product.create(name: &#39;Case&#39;, value: 10, base_value: 7, image_url: &#39;http://www.example.com&#39;, category: new_category)</code>
           </li>
         </div>
       
@@ -17264,12 +17033,23 @@
 
             
 
+            <code class="ruby">    new_order = Order.create(reference_number: &#39;123456&#39;, status: 1, payment_date: Date.today, client: new_client)</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="48">
+            <span class="hits">1</span>
+            
+
+            
+
             <code class="ruby">    order_product = OrderProduct.create(order_id: new_order.id, product_id: new_product.id)</code>
           </li>
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="48">
+          <li class="never" data-hits="" data-linenumber="49">
             
             
 
@@ -17280,7 +17060,7 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="49">
+          <li class="covered" data-hits="1" data-linenumber="50">
             <span class="hits">1</span>
             
 
@@ -17291,7 +17071,7 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="50">
+          <li class="covered" data-hits="1" data-linenumber="51">
             <span class="hits">1</span>
             
 
@@ -17302,7 +17082,7 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="51">
+          <li class="covered" data-hits="1" data-linenumber="52">
             <span class="hits">1</span>
             
 
@@ -17313,7 +17093,7 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="52">
+          <li class="covered" data-hits="1" data-linenumber="53">
             <span class="hits">1</span>
             
 
@@ -17324,7 +17104,7 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="53">
+          <li class="covered" data-hits="1" data-linenumber="54">
             <span class="hits">1</span>
             
 
@@ -17335,7 +17115,7 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="54">
+          <li class="covered" data-hits="1" data-linenumber="55">
             <span class="hits">1</span>
             
 
@@ -17346,7 +17126,7 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="55">
+          <li class="never" data-hits="" data-linenumber="56">
             
             
 
@@ -17357,7 +17137,7 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="56">
+          <li class="covered" data-hits="1" data-linenumber="57">
             <span class="hits">1</span>
             
 
@@ -17368,7 +17148,7 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="57">
+          <li class="covered" data-hits="1" data-linenumber="58">
             <span class="hits">1</span>
             
 
@@ -17379,7 +17159,7 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="58">
+          <li class="never" data-hits="" data-linenumber="59">
             
             
 
@@ -17390,7 +17170,7 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="59">
+          <li class="never" data-hits="" data-linenumber="60">
             
             
 
@@ -17526,7 +17306,7 @@
 
             
 
-            <code class="ruby">    new_order = Order.create(status: 1, value: 10, payment_date: Date.today, client: new_client)</code>
+            <code class="ruby">    new_order = Order.create(reference_number: &#39;123456&#39;, status: 1, value: 10, payment_date: Date.today, client: new_client)</code>
           </li>
         </div>
       
@@ -17810,7 +17590,7 @@
 
             
 
-            <code class="ruby">    new_order = Order.create(status: 1, value: 10, payment_date: Date.today, client: new_client)</code>
+            <code class="ruby">    new_order = Order.create(reference_number: &#39;123456&#39;, status: 1, value: 10, payment_date: Date.today, client: new_client)</code>
           </li>
         </div>
       
@@ -17953,7 +17733,7 @@
 
             
 
-            <code class="ruby">    new_order = Order.create(status: 1, value: 10, payment_date: Date.today, client: new_client)</code>
+            <code class="ruby">    new_order = Order.create(reference_number: &#39;123456&#39;, status: 1, value: 10, payment_date: Date.today, client: new_client)</code>
           </li>
         </div>
       
@@ -18217,7 +17997,7 @@
 
             
 
-            <code class="ruby">    new_order = Order.create(status: 1, value: 10, payment_date: Date.today, client: new_client)</code>
+            <code class="ruby">    new_order = Order.create(reference_number: &#39;123456&#39;, status: 1, value: 10, payment_date: Date.today, client: new_client)</code>
           </li>
         </div>
       
@@ -18545,7 +18325,7 @@
 
             
 
-            <code class="ruby">    new_order = Order.create(status: 1, value: 10, payment_date: Date.today, client: new_client)</code>
+            <code class="ruby">    new_order = Order.create(reference_number: &#39;123456&#39;, status: 1, value: 10, payment_date: Date.today, client: new_client)</code>
           </li>
         </div>
       
@@ -18688,7 +18468,7 @@
 
             
 
-            <code class="ruby">    new_order = Order.create(status: 1, value: 10, payment_date: Date.today, client: new_client)</code>
+            <code class="ruby">    new_order = Order.create(reference_number: &#39;123456&#39;, status: 1, value: 10, payment_date: Date.today, client: new_client)</code>
           </li>
         </div>
       
@@ -18930,7 +18710,7 @@
 
             
 
-            <code class="ruby">    new_order = Order.create(status: 1, value: 10, payment_date: Date.today, client: new_client)</code>
+            <code class="ruby">    new_order = Order.create(reference_number: &#39;123456&#39;, status: 1, value: 10, payment_date: Date.today, client: new_client)</code>
           </li>
         </div>
       
@@ -19269,7 +19049,7 @@
 
             
 
-            <code class="ruby">    new_order = Order.create(status: 1, value: 10, payment_date: Date.today, client: new_client)</code>
+            <code class="ruby">    new_order = Order.create(reference_number: &#39;123456&#39;, status: 1, value: 10, payment_date: Date.today, client: new_client)</code>
           </li>
         </div>
       

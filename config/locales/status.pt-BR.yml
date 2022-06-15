@@ -1,0 +1,11 @@
+pt-BR:
+  activerecord:
+    attributes:
+      order/status:
+        sent: Enviado
+        posting: Enviando
+        picking: Coletando
+        delivered: Entregue
+        production: Em Produção
+        waiting: Esperando
+        canceled: Cancelado

@@ -6,7 +6,7 @@ describe 'User views orders details' do
     new_client = Client.create(name:'Pedro Gomes', state: 'Ceará', city: 'Fortaleza', address: 'Rua das lutas, 1000', email: 'example@example.com')
     new_category = Category.create(name: 'Phone')
     new_product = Product.create(name: 'Case', value: 10, base_value: 7, image_url: 'http://www.example.com', category: new_category)
-    new_order = Order.create(status: 1, value: 10, payment_date: Date.today, client: new_client)
+    new_order = Order.create(reference_number: '123456', status: 1, value: 10, payment_date: Date.today, client: new_client)
     order_product = OrderProduct.create(order_id: new_order.id, product_id: new_product.id)
 
     visit order_path(new_order.id)
@@ -19,7 +19,7 @@ describe 'User views orders details' do
     new_client = Client.create(name:'Pedro Gomes', state: 'Ceará', city: 'Fortaleza', address: 'Rua das lutas, 1000', email: 'example@example.com')
     new_category = Category.create(name: 'Phone')
     new_product = Product.create(name: 'Case', value: 10, base_value: 7, image_url: 'http://www.example.com', category: new_category)
-    new_order = Order.create(status: 1, value: 10, payment_date: Date.today, client: new_client)
+    new_order = Order.create(reference_number: '123456', status: 1, value: 10, payment_date: Date.today, client: new_client)
     order_product = OrderProduct.create(order_id: new_order.id, product_id: new_product.id)
 
     visit root_path
@@ -41,7 +41,7 @@ describe 'User views orders details' do
     new_client = Client.create(name:'Pedro Gomes', state: 'Ceará', city: 'Fortaleza', address: 'Rua das lutas, 1000', email: 'example@example.com')
     new_category = Category.create(name: 'Phone')
     new_product = Product.create(name: 'Case', value: 10, base_value: 7, image_url: 'http://www.example.com', category: new_category)
-    new_order = Order.create(status: 1, value: 10, payment_date: Date.today, client: new_client)
+    new_order = Order.create(reference_number: '123456', status: 1, value: 10, payment_date: Date.today, client: new_client)
     order_product = OrderProduct.create(order_id: new_order.id, product_id: new_product.id)
 
     visit root_path

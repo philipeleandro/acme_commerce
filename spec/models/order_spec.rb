@@ -40,22 +40,6 @@ RSpec.describe Order, type: :model do
       end
     end
 
-    context 'generate code' do
-      it 'when create a new order' do
-        user = User.create(email: 'example@example.com', password: 'password')
-        new_client = Client.create(name:'Pedro Gomes', state: 'Ceará', city: 'Fortaleza', address: 'Rua das lutas, 1000', email: 'example@example.com')
-        new_category = Category.create(name: 'Phone')
-        new_product = Product.create(name: 'Case', value: 10, base_value: 7, image_url: 'http://www.example.com', category: new_category)
-        new_order = Order.new(status: 1, value: 10, payment_date: Date.today, client: new_client)
-        order_product = OrderProduct.create(order_id: new_order.id, product_id: new_product.id)
-
-        new_order.save!
-        result = new_order.reference_number
-
-        expect(result).not_to be_empty
-      end
-    end
-
     context 'status' do
       it 'must be production when created' do
         user = User.create(email: 'example@example.com', password: 'password')
