@@ -1,24 +1,36 @@
-# README
+# ACME Commerce
+[![Ruby Style Guide](https://img.shields.io/badge/code_style-rubocop-brightgreen.svg)](https://github.com/rubocop/rubocop)
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Cobertura de Teste - SimpleCov
+![image](https://user-images.githubusercontent.com/92264330/174062809-0b466bc4-0e2d-422b-b656-3a99c6717c94.png)
 
-Things you may want to cover:
+## 📖 Descrição
+ACME Commerce agora possuí uma plataforma online para gerenciamento
 
-* Ruby version
+- **User:** Cadastra, visualiza, edita e apaga ordens de serviços, produtos, categorias e clientes, além de verificar os produtos mais vendidos e verificar os produtos por categorias.
 
-* System dependencies
+## 🚀 Instrução
+Use o seguinte comando para clonar o repositório:
+```sh
+git clone git@github.com:philipeleandro/acme_commerce.git
+```
+Rode os comandos 
+ - `cd ./acme_commerce`
+ - `bundle install`
+ - `rails db:drop`
+ - `rails db:create`
+ - `rails db:migrate`
+ - `rake setup_csv:import`
 
-* Configuration
+## 🚀 A aplicação contempla:
+ - Ruby on Rails e Postgres
+ - Rake task para popular banco de dados com arquivo CSV 
+ - Autenticação com gem `Devise`
+ - 100% de cobrimento de teste
 
-* Database creation
+  OBS: Rake Task encontra-se no caminho `./lib/tasks/setup_csv.rake` e o arquivo CSV em `./csv/planilha-acmecommerce.csv`
 
-* Database initialization
+## 🖥️ O que fazer no ACME Commerce?
 
-* How to run the test suite
+O usuário ao se cadastrar na plataforma terá acesso e poderá cadastrar, visualizar, editar e apagar ordens de serviços, produtos, categorias e clientes, assim podendo fazer a gestão da empresa. Com a população do banco de dados a partir do arquivo CSV pode-se ter acesso aos dados antigos.
 
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
