@@ -45,3 +45,5 @@ Rode os comandos
 
 O usuário ao se cadastrar na plataforma terá acesso e poderá cadastrar, visualizar, editar e apagar ordens de serviços, produtos, categorias e clientes, assim podendo fazer a gestão da empresa. Com a população do banco de dados a partir do arquivo CSV pode-se ter acesso aos dados antigos.
 
+Através da barra de navegação na parte superior da aplicação, tem-se as funções disponíveis para o usuário. A função de listagem de produtos de categoria pode ser encontrada em `Categoria de Produtos`, no qual ao lado de cada categoria listada o usuário pode verificar os produtos ligada a mesma. Em `Relatório`, o usuário pode verificar os produtos vendidos pela loja ao lado do nome de cada produto.
+
