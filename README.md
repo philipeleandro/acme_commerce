@@ -37,7 +37,7 @@ Rode os comandos
  - Rake task para popular banco de dados com arquivo CSV 
  - Autenticação com gem `Devise`
  - 100% de cobrimento de teste
- - Deploy Heroku
+ - Deploy [Heroku](https://polar-earth-21571.herokuapp.com/)
 
   OBS: Rake Task encontra-se no caminho `./lib/tasks/setup_csv.rake` e o arquivo CSV em `./csv/planilha-acmecommerce.csv`
 
