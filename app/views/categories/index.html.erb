@@ -16,6 +16,7 @@
           <td><%= category.name %></td>
           <td><%= button_to 'Deletar', category, method: :delete  %></td>
           <td><%= link_to 'Editar', edit_category_path(category) %></td>
+          <td><%= link_to 'Produtos', filter_product_category_path(category) %></td>
         </tr>
       <% end %>
     </tbody>

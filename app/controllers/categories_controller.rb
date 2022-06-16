@@ -1,5 +1,5 @@
 class CategoriesController < ApplicationController
-  before_action :authenticate_user!, only: [:index, :new, :create, :edit, :update]
+  before_action :authenticate_user!, only: [:index, :new, :create, :edit, :update, :filter_product]
 
   def index
     @categories = Category.all
@@ -42,6 +42,12 @@ class CategoriesController < ApplicationController
     end
   end
 
+  def filter_product
+    @category = Category.find(params[:id])
+    @products = Product.where(category_id: @category.id)
+  end
+
+  private
   def category_params
     params.require(:category).permit(:name)
   end

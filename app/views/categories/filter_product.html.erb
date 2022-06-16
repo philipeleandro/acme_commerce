@@ -1,0 +1,26 @@
+<h1>Produtos de <%= @category.name %>
+
+<% if @products.empty? %>
+  <p>Não há produto nessa categoria</p>
+<% else %>
+  <table>
+    <thead>
+      <tr>
+        <th>Produto</th>
+        <th>Valor (R$)</th>
+        <th>Imagem</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% @products.each do |product| %>
+        <tr>
+          <td><%= product.name %></td>
+          <td><%= product.value %></td>
+          <td><%= product.image_url %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+<% end %>
+
+<%= link_to 'Voltar', categories_path%>

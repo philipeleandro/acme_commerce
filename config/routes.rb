@@ -6,4 +6,8 @@ Rails.application.routes.draw do
   resources :categories, only: [:index, :new, :create, :destroy, :edit, :update]
   resources :products, only: [:index, :new, :create, :show, :destroy, :edit, :update]
   resources :orders, only: [:index, :new, :create, :show, :destroy, :edit, :update]
+
+  resources :categories do
+    get 'filter_product', on: :member
+  end
 end
