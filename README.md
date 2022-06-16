@@ -10,6 +10,11 @@ ACME Commerce agora possuí uma plataforma online para gerenciamento
 
 - **User:** Cadastra, visualiza, edita e apaga ordens de serviços, produtos, categorias e clientes, além de verificar os produtos mais vendidos e verificar os produtos por categorias.
 
+## ⚙️ Requisitos
+ - Ruby 3.1.2
+ - Rails 7.0.3
+ - PostgreSQL 12.11
+
 ## 🚀 Instrução
 Use o seguinte comando para clonar o repositório:
 ```sh
@@ -22,6 +27,7 @@ Rode os comandos
  - `rails db:create`
  - `rails db:migrate`
  - `rake setup_csv:import`
+ -  rails server
  
 ## 🖥️ Diagrama de modelos
 `https://github.com/philipeleandro/acme_commerce/blob/main/erd.pdf`
