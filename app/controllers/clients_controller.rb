@@ -1,5 +1,6 @@
 # frozen_string_literal: true
 
+# Client actions
 class ClientsController < ApplicationController
   before_action :authenticate_user!, only: %i[index new show create edit update]
 

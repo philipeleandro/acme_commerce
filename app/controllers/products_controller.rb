@@ -1,5 +1,6 @@
 # frozen_string_literal: true
 
+# Product actions
 class ProductsController < ApplicationController
   before_action :authenticate_user!, only: %i[index show new create edit update destroy product_report]
 

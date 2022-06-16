@@ -1,5 +1,6 @@
 # frozen_string_literal: true
 
+# Category actions
 class CategoriesController < ApplicationController
   before_action :authenticate_user!, only: %i[index new create edit update filter_product]
 

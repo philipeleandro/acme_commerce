@@ -1,5 +1,6 @@
 # frozen_string_literal: true
 
+# Order actions
 class OrdersController < ApplicationController
   before_action :authenticate_user!, only: %i[index new create show edit update]
 
