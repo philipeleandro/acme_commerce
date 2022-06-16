@@ -27,7 +27,7 @@ Rode os comandos
  - `rails db:create`
  - `rails db:migrate`
  - `rake setup_csv:import`
- -  rails server
+ - `rails server`
  
 ## 🖥️ Diagrama de modelos
 `https://github.com/philipeleandro/acme_commerce/blob/main/erd.pdf`
