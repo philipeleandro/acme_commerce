@@ -21,6 +21,9 @@ Rode os comandos
  - `rails db:create`
  - `rails db:migrate`
  - `rake setup_csv:import`
+ 
+## 🖥️ Diagrama de modelos
+`https://github.com/philipeleandro/acme_commerce/blob/main/erd.pdf`
 
 ## 🚀 A aplicação contempla:
  - Ruby on Rails e Postgres
