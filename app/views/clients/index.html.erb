@@ -3,16 +3,22 @@
 <% if @clients.empty? %>
   <p> Não há clientes cadastrados </p>
 <% else %>
-  <% @clients.each do |client| %>
-    <div>
-      <dl>
-        <dt>Nome: </dt>
-        <dd><%= link_to client.name, client_path(client) %></dd>
-        <dt>Endereço: </dt>
-        <dd><%= client.address %>, <%= client.city %> - <%= client.state %><br></dd>
-      </dl>
-    </div>
-  <% end %>
+  <table>
+    <thead>
+      <tr>
+        <th>Nome</th>
+        <th>Endereço</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% @clients.each do |client| %> 
+        <tr>
+          <td><%= link_to client.name, client_path(client) %></td>
+          <td><%= client.address %>, <%= client.city %> - <%= client.state %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
 <% end %>
 
 <%= link_to 'Voltar', root_path %>

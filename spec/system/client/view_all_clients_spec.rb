@@ -22,10 +22,10 @@ describe 'User sees all clients' do
     click_on 'Log in'
     click_on 'Clientes'
 
-    expect(page).to have_content 'Nome: Pedro Gomes'
-    expect(page).to have_content 'Endereço: Rua das lutas, 1000, Fortaleza - Ceará'
-    expect(page).to have_content 'Nome: Pedro Júnior'
-    expect(page).to have_content 'Endereço: Rua das lutas, 700, Fortaleza - Ceará'
+    expect(page).to have_content 'Pedro Gomes'
+    expect(page).to have_content 'Rua das lutas, 1000, Fortaleza - Ceará'
+    expect(page).to have_content 'Pedro Júnior'
+    expect(page).to have_content 'Rua das lutas, 700, Fortaleza - Ceará'
   end
 
   it 'and does not have registed clients' do

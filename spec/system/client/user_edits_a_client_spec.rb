@@ -39,8 +39,8 @@ describe 'User edits a client' do
     click_on 'Cadastrar'
 
     expect(page).to have_content 'Cliente atualizado com sucesso'
-    expect(page).to have_content 'Nome: Pedrinho'
-    expect(page).to have_content 'Endereço: Rua nova, 14, Belo Horizonte - Minas Gerais'
+    expect(page).to have_content 'Pedrinho'
+    expect(page).to have_content 'Rua nova, 14, Belo Horizonte - Minas Gerais'
   end
 
   it 'fail' do

@@ -38,8 +38,8 @@ describe 'User register a new client' do
 
     expect(current_path).to eq clients_path
     expect(page).to have_content 'Cliente cadastrado'
-    expect(page).to have_content 'Nome: Pedro'
-    expect(page).to have_content 'Endereço: Rua da glória, 750, Crato - Ceará'
+    expect(page).to have_content 'Pedro'
+    expect(page).to have_content 'Rua da glória, 750, Crato - Ceará'
   end
 
   it 'fail with empty data' do
