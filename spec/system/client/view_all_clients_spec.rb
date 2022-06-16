@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require 'rails_helper'
 
 describe 'User sees all clients' do
@@ -8,8 +10,10 @@ describe 'User sees all clients' do
   end
 
   it 'success' do
-    Client.create(name:'Pedro Gomes', state: 'Ceará', city: 'Fortaleza', address: 'Rua das lutas, 1000', email: 'pedrinho@example.com')
-    Client.create(name:'Pedro Júnior', state: 'Ceará', city: 'Fortaleza', address: 'Rua das lutas, 700', email: 'example@example.com')
+    Client.create(name: 'Pedro Gomes', state: 'Ceará', city: 'Fortaleza', address: 'Rua das lutas, 1000',
+                  email: 'pedrinho@example.com')
+    Client.create(name: 'Pedro Júnior', state: 'Ceará', city: 'Fortaleza', address: 'Rua das lutas, 700',
+                  email: 'example@example.com')
     user = User.create(email: 'example@example.com', password: 'password')
 
     visit root_path

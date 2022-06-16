@@ -1,0 +1,8 @@
+Style/FrozenStringLiteralComment:
+  Enabled: false
+Style/Documentation:
+  Enabled: false
+Metrics/BlockLength:
+  IgnoredMethods: ['describe', 'context', 'it']
+Metrics/MethodLength:
+  Max: 200

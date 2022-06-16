@@ -1,5 +1,6 @@
-require 'rails_helper'
+# frozen_string_literal: true
 
+require 'rails_helper'
 
 describe 'User sign in' do
   it 'in root_path' do
@@ -21,8 +22,6 @@ describe 'User sign in' do
   end
 
   it 'fail' do
-    user = User.create(email: 'example@example.com', password: 'password')
-
     visit root_path
     click_on 'Entrar'
     fill_in 'E-mail', with: 'example@example.com'

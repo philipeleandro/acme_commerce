@@ -1,5 +1,7 @@
+# frozen_string_literal: true
+
 class CategoriesController < ApplicationController
-  before_action :authenticate_user!, only: [:index, :new, :create, :edit, :update, :filter_product]
+  before_action :authenticate_user!, only: %i[index new create edit update filter_product]
 
   def index
     @categories = Category.all
@@ -11,7 +13,7 @@ class CategoriesController < ApplicationController
 
   def create
     @category = Category.new(category_params)
-    
+
     if @category.save
       redirect_to categories_path, notice: 'Categoria cadastrada'
     else
@@ -48,6 +50,7 @@ class CategoriesController < ApplicationController
   end
 
   private
+
   def category_params
     params.require(:category).permit(:name)
   end

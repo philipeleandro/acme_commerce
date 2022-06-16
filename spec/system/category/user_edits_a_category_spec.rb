@@ -1,6 +1,8 @@
+# frozen_string_literal: true
+
 require 'rails_helper'
 
-describe "User edits a category" do
+describe 'User edits a category' do
   it 'and must log in' do
     category = Category.create(name: 'Bag')
 
@@ -11,7 +13,7 @@ describe "User edits a category" do
 
   it 'in categories_path' do
     user = User.create(email: 'example@example.com', password: 'password')
-    category = Category.create(name: 'Bag')
+    Category.create(name: 'Bag')
 
     visit root_path
     click_on 'Entrar'
@@ -21,11 +23,11 @@ describe "User edits a category" do
     click_on 'Editar'
 
     expect(page).to have_field('Nome', with: 'Bag')
-  end 
+  end
 
   it 'success' do
     user = User.create(email: 'example@example.com', password: 'password')
-    category = Category.create(name: 'Bag')
+    Category.create(name: 'Bag')
 
     visit root_path
     click_on 'Entrar'
@@ -42,7 +44,7 @@ describe "User edits a category" do
 
   it 'fail' do
     user = User.create(email: 'example@example.com', password: 'password')
-    category = Category.create(name: 'Bag')
+    Category.create(name: 'Bag')
 
     visit root_path
     click_on 'Entrar'

@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require 'rails_helper'
 
 describe 'User view Report' do
@@ -9,14 +11,18 @@ describe 'User view Report' do
 
   it 'success' do
     user = User.create(email: 'example@example.com', password: 'password')
-    new_client = Client.create(name:'Pedro Gomes', state: 'Ceará', city: 'Fortaleza', address: 'Rua das lutas, 1000', email: 'example@example.com')
+    new_client = Client.create(name: 'Pedro Gomes', state: 'Ceará', city: 'Fortaleza', address: 'Rua das lutas, 1000',
+                               email: 'example@example.com')
     new_category = Category.create(name: 'Phone')
-    new_product = Product.create(name: 'Case', value: 10, base_value: 7, image_url: 'http://www.example.com', category: new_category)
-    new_product_two = Product.create(name: 'Phone', value: 10, base_value: 7, image_url: 'http://www.example.com', category: new_category)
-    new_order = Order.create(reference_number: '123456', status: 1, value: 10, payment_date: Date.today, client: new_client)
-    order_product = OrderProduct.create(order_id: new_order.id, product_id: new_product.id)
-    order_product = OrderProduct.create(order_id: new_order.id, product_id: new_product.id)
-    order_product = OrderProduct.create(order_id: new_order.id, product_id: new_product_two.id)
+    new_product = Product.create(name: 'Case', value: 10, base_value: 7, image_url: 'http://www.example.com',
+                                 category: new_category)
+    new_product_two = Product.create(name: 'Phone', value: 10, base_value: 7, image_url: 'http://www.example.com',
+                                     category: new_category)
+    new_order = Order.create(reference_number: '123456', status: 1, value: 10, payment_date: Date.today,
+                             client: new_client)
+    OrderProduct.create(order_id: new_order.id, product_id: new_product.id)
+    OrderProduct.create(order_id: new_order.id, product_id: new_product.id)
+    OrderProduct.create(order_id: new_order.id, product_id: new_product_two.id)
 
     login_as(user)
     visit root_path

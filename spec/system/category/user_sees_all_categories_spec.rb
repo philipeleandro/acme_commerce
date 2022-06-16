@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require 'rails_helper'
 
 describe 'User sees all categories' do
@@ -17,7 +19,7 @@ describe 'User sees all categories' do
     login_as(user)
     click_on 'Log in'
     click_on 'Categorias de Produtos'
-    
+
     expect(page).to have_content 'Nome da Categoria'
     expect(page).to have_content 'Case'
     expect(page).to have_content 'Bag'
@@ -25,7 +27,7 @@ describe 'User sees all categories' do
 
   it 'does not have category' do
     user = User.create(email: 'example@example.com', password: 'password')
-  
+
     login_as(user)
     visit categories_path
 

@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require 'rails_helper'
 
 describe 'User register a new product' do
@@ -61,7 +63,7 @@ describe 'User register a new product' do
     fill_in 'Imagem', with: 'http://www.example.com'
     select 'Phone', from: 'Categoria'
     click_on 'Cadastrar'
-    
+
     expect(page).to have_content 'Verifique os erros abaixo:'
     expect(page).to have_content 'Valor não pode ficar em branco'
     expect(page).to have_content 'Valor Base não pode ficar em branco'

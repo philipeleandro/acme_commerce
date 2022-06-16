@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require 'rails_helper'
 
 describe 'User views all products' do
@@ -22,9 +24,8 @@ describe 'User views all products' do
 
   it 'success' do
     user = User.create(email: 'example@example.com', password: 'password')
-    category = Category.create(name: 'Phone')
-    Product.create(name: 'Case', value: 10, base_value: 7, image_url: 'http://www.example.com', category: category)
-
+    new_category = Category.create(name: 'Phone')
+    Product.create(name: 'Case', value: 10, base_value: 7, image_url: 'http://www.example.com', category: new_category)
 
     visit root_path
     click_on 'Entrar'

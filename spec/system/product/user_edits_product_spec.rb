@@ -1,10 +1,13 @@
+# frozen_string_literal: true
+
 require 'rails_helper'
 
-describe "User edits a product" do
+describe 'User edits a product' do
   it 'in product details' do
     user = User.create(email: 'example@example.com', password: 'password')
-    category = Category.create(name: 'Phone')
-    product = Product.create(name: 'Case', value: 10, base_value: 7, image_url: 'http://www.example.com', category: category)
+    new_category = Category.create(name: 'Phone')
+    Product.create(name: 'Case', value: 10, base_value: 7, image_url: 'http://www.example.com',
+                   category: new_category)
 
     visit root_path
     click_on 'Entrar'
@@ -22,8 +25,8 @@ describe "User edits a product" do
 
   it 'success' do
     user = User.create(email: 'example@example.com', password: 'password')
-    category = Category.create(name: 'Phone')
-    product = Product.create(name: 'Case', value: 10, base_value: 7, image_url: 'http://www.example.com', category: category)
+    new_category = Category.create(name: 'Phone')
+    Product.create(name: 'Case', value: 10, base_value: 7, image_url: 'http://www.example.com', category: new_category)
 
     visit root_path
     click_on 'Entrar'
@@ -35,7 +38,6 @@ describe "User edits a product" do
     fill_in 'Valor', with: '12'
     click_on 'Cadastrar'
 
-
     expect(page).to have_content 'Produto atualizado'
     expect(page).to have_content 'Bag'
     expect(page).to have_content '12.0'
@@ -43,8 +45,8 @@ describe "User edits a product" do
 
   it 'fail' do
     user = User.create(email: 'example@example.com', password: 'password')
-    category = Category.create(name: 'Phone')
-    product = Product.create(name: 'Case', value: 10, base_value: 7, image_url: 'http://www.example.com', category: category)
+    new_category = Category.create(name: 'Phone')
+    Product.create(name: 'Case', value: 10, base_value: 7, image_url: 'http://www.example.com', category: new_category)
 
     visit root_path
     click_on 'Entrar'
@@ -57,7 +59,6 @@ describe "User edits a product" do
     fill_in 'Valor', with: ''
     fill_in 'Imagem', with: 'http://www.example.com'
     click_on 'Cadastrar'
-
 
     expect(page).to have_content('Não foi possível atualizar')
   end

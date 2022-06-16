@@ -1,5 +1,7 @@
+# frozen_string_literal: true
+
 class ClientsController < ApplicationController
-  before_action :authenticate_user!, only: [:index, :new, :show, :create, :edit, :update]
+  before_action :authenticate_user!, only: %i[index new show create edit update]
 
   def index
     @clients = Client.all
@@ -11,7 +13,7 @@ class ClientsController < ApplicationController
 
   def create
     @client = Client.new(client_params)
-    
+
     if @client.save
       redirect_to clients_path, notice: 'Cliente cadastrado'
     else
@@ -47,6 +49,7 @@ class ClientsController < ApplicationController
   end
 
   private
+
   def client_params
     params.require(:client).permit(:name, :address, :city, :state, :email)
   end

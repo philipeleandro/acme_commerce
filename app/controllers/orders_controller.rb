@@ -1,6 +1,8 @@
+# frozen_string_literal: true
+
 class OrdersController < ApplicationController
-  before_action :authenticate_user!, only: [:index, :new, :create, :show, :edit, :update]
-  
+  before_action :authenticate_user!, only: %i[index new create show edit update]
+
   def index
     @orders = Order.all
   end
@@ -27,7 +29,7 @@ class OrdersController < ApplicationController
     @order = Order.find(params[:id])
   end
 
-  def destroy 
+  def destroy
     @order = Order.find(params[:id])
 
     @order.destroy
@@ -50,6 +52,7 @@ class OrdersController < ApplicationController
   end
 
   private
+
   def order_params
     params.require(:order).permit(:reference_number, :status, :payment_date, :value, :client_id, :product_id)
   end

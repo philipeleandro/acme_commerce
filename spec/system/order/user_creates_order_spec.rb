@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require 'rails_helper'
 
 describe 'User register a new order' do
@@ -19,12 +21,12 @@ describe 'User register a new order' do
     expect(page).to have_field 'Produto'
   end
 
-
   it 'with success' do
     user = User.create(email: 'example@example.com', password: 'password')
-    new_client = Client.create(name:'Pedro Gomes', state: 'Ceará', city: 'Fortaleza', address: 'Rua das lutas, 1000', email: 'example@example.com')
+    Client.create(name: 'Pedro Gomes', state: 'Ceará', city: 'Fortaleza', address: 'Rua das lutas, 1000',
+                  email: 'example@example.com')
     new_category = Category.create(name: 'Phone')
-    new_product = Product.create(name: 'Case', value: 10, base_value: 7, image_url: 'http://www.example.com', category: new_category)
+    Product.create(name: 'Case', value: 10, base_value: 7, image_url: 'http://www.example.com', category: new_category)
 
     login_as(user)
     visit root_path
@@ -35,17 +37,19 @@ describe 'User register a new order' do
     fill_in 'Número de Referencia', with: '1233456'
     select 'Case', from: 'Produto'
     click_on 'Cadastrar'
-    
+
     expect(page).to have_content 'Valor: R$ 10.0'
   end
 
   it 'fail' do
     user = User.create(email: 'example@example.com', password: 'password')
-    new_client = Client.create(name:'Pedro Gomes', state: 'Ceará', city: 'Fortaleza', address: 'Rua das lutas, 1000', email: 'example@example.com')
+    new_client = Client.create(name: 'Pedro Gomes', state: 'Ceará', city: 'Fortaleza', address: 'Rua das lutas, 1000',
+                               email: 'example@example.com')
     new_category = Category.create(name: 'Phone')
-    new_product = Product.create(name: 'Case', value: 10, base_value: 7, image_url: 'http://www.example.com', category: new_category)
+    new_product = Product.create(name: 'Case', value: 10, base_value: 7, image_url: 'http://www.example.com',
+                                 category: new_category)
     new_order = Order.create(reference_number: '123456', status: 1, payment_date: Date.today, client: new_client)
-    order_product = OrderProduct.create(order_id: new_order.id, product_id: new_product.id)
+    OrderProduct.create(order_id: new_order.id, product_id: new_product.id)
 
     login_as(user)
     visit root_path
@@ -53,7 +57,7 @@ describe 'User register a new order' do
     click_on 'Cadastrar nova ordem'
     select 'Case', from: 'Produto'
     click_on 'Cadastrar'
-    
+
     expect(page).to have_content 'Não foi possível cadastrar'
     expect(page).to have_content 'Data de Pagamento não pode ficar em branco'
   end

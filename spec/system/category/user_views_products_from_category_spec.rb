@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require 'rails_helper'
 
 describe 'User sees all categories' do
@@ -11,8 +13,9 @@ describe 'User sees all categories' do
 
   it 'success' do
     user = User.create(email: 'example@example.com', password: 'password')
-    category = Category.create(name: 'Case')
-    new_product = Product.create(name: 'Case', value: 10, base_value: 7, image_url: 'http://www.example.com', category: category)
+    new_category = Category.create(name: 'Case')
+    Product.create(name: 'Case', value: 10, base_value: 7, image_url: 'http://www.example.com',
+                   category: new_category)
 
     login_as(user)
     visit root_path
@@ -29,8 +32,8 @@ describe 'User sees all categories' do
 
   it 'success' do
     user = User.create(email: 'example@example.com', password: 'password')
-    category = Category.create(name: 'Case')
-    
+    Category.create(name: 'Case')
+
     login_as(user)
     visit root_path
     click_on 'Categorias de Produtos'
