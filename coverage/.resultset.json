@@ -538,6 +538,9 @@
           1,
           1,
           null,
+          null,
+          1,
+          null,
           null
         ]
       },
@@ -1828,6 +1831,40 @@
           null
         ]
       },
+      "/home/philipe/Desktop/acme_commerce/spec/system/product_report/user_views_product_reports_spec.rb": {
+        "lines": [
+          1,
+          null,
+          1,
+          1,
+          1,
+          null,
+          1,
+          null,
+          null,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          null,
+          1,
+          1,
+          1,
+          null,
+          1,
+          1,
+          1,
+          1,
+          null,
+          null
+        ]
+      },
       "/home/philipe/Desktop/acme_commerce/spec/system/user_sign_in_spec.rb": {
         "lines": [
           1,
@@ -2120,6 +2157,10 @@
           null,
           null,
           1,
+          4,
+          null,
+          null,
+          1,
           1,
           4,
           null,
@@ -2127,6 +2168,6 @@
         ]
       }
     },
-    "timestamp": 1655343559
+    "timestamp": 1655348793
   }
 }

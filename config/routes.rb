@@ -10,4 +10,7 @@ Rails.application.routes.draw do
   resources :categories do
     get 'filter_product', on: :member
   end
+
+  get 'product_report', to: 'products#product_report'
+
 end

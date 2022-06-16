@@ -19,6 +19,7 @@
           <%= link_to 'Categorias de Produtos', categories_path %> |
           <%= link_to 'Ver Produtos', products_path %> |
           <%= link_to 'Ordens', orders_path %> |
+          <%= link_to 'Relatório', product_report_path %> |
           <%= button_to 'Sair', destroy_user_session_path, method: :delete %>
         <% else %>
           <%= link_to 'Entrar', new_user_session_path %>

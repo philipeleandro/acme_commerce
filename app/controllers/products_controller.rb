@@ -1,5 +1,5 @@
 class ProductsController < ApplicationController
-  before_action :authenticate_user!, only: [:index, :show, :new, :create]
+  before_action :authenticate_user!, only: [:index, :show, :new, :create, :edit, :update, :destroy, :product_report]
 
   def index
     @products = Product.all
@@ -44,6 +44,10 @@ class ProductsController < ApplicationController
 
   def edit
     @product = Product.find(params[:id])
+  end
+
+  def product_report
+    @products = OrderProduct.all.map {|b| Product.find_by(id: b.product_id).name }
   end
 
   private

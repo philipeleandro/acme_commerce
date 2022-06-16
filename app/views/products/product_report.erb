@@ -1,0 +1,18 @@
+<h1>Relatório de Produtos</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Produto</th>
+      <th>Quantidade Vendida</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @products.uniq.each do |product| %>
+      <tr>
+        <td><%= product %></td>
+        <td><%= @products.count(product) %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
